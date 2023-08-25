@@ -16,6 +16,13 @@ const HeroContainer = styled.div`
   font-family: "Sen", sans-serif;
 `;
 
+const HeroRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+`;
+
 
 function HeroSection() {
     return (
