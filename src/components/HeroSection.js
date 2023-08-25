@@ -59,7 +59,6 @@ const LocationText = styled.div`
 const IconsRow = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   width: 200px;
   margin-top: 20px;
 `;
@@ -68,7 +67,30 @@ const Icon = styled.a`
   width: 30px;
   height: 30px;
   cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: attr(
+      data-tooltip
+    ); /* Display the data-tooltip attribute as content */
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease-in-out;
+    bottom: 30px; /* Adjust the tooltip position */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &:hover::after {
+    opacity: 1; /* Show the tooltip on hover */
+  }
 `;
+
 
 const DescriptionText = styled.div`
   font-size: 16px;
@@ -96,22 +118,35 @@ function HeroSection() {
           <SubText>Full Stack Software Engineer</SubText>
           <LocationText>Based in Kenya</LocationText>
           <IconsRow>
-            <Icon href="https://github.com/Vkerubo" target="_blank">
+            <Icon
+              href="https://github.com/Vkerubo"
+              target="_blank"
+              data-tooltip="GitHub"
+            >
               <img src={GithubIcon} alt="GitHub" />
             </Icon>
             <Icon
               href="https://linkedin.com/in/valentinekerubo"
               target="_blank"
+              data-tooltip="LinkedIn"
             >
               <img src={LinkedInIcon} alt="LinkedIn" />
             </Icon>
-            <Icon href="https://twitter.com/Kerubo_____" target="_blank">
+            <Icon
+              href="https://twitter.com/Kerubo_____"
+              target="_blank"
+              data-tooltip="Twitter"
+            >
               <img src={XIcon} alt="Twitter" />
             </Icon>
-            <Icon href="mailto:kerubovalentine1@gmail.com">
+            <Icon
+              href="mailto:kerubovalentine1@gmail.com"
+              data-tooltip="Email Me"
+            >
               <img src={EmailIcon} alt="Email" />
             </Icon>
           </IconsRow>
+
           <DescriptionText>
             👩‍💻 Crafting digital dreams | Lifelong learner | Your go-to developer
             for amazing projects 🚀 | Passionate about mentoring women in tech
