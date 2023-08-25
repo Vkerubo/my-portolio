@@ -84,15 +84,41 @@ const ResumeButton = styled.a`
   padding: 10px 20px;
   border-radius: 4px;
   transition: color 0.3s, transform 0.3s, background-color 0.3s; /* Add transform and background-color for transitions */
+  display: relative; /* Ensure the button takes only the necessary width */
 
   transform: perspective(400px) rotateX(0deg); /* Add initial 3D effect */
+
+  position: relative; /* Add position relative to position the ::before pseudo-element */
 
   &:hover,
   &:active {
     color: #fff;
     background-color: #56a8a1;
     transform: perspective(400px) rotateX(10deg); /* Add hover 3D effect */
-    box-shadow: 0 4px 6px rgba(0, 0, 256, 1); /* Add box-shadow for depth */
+    box-shadow: 0 4px 6px rgba(255, 200, 255, 0.9); /* Add box-shadow for depth */
+  }
+`;
+
+const OpenCVLabel = styled.span`
+  position: absolute;
+  top: -40px; /* Adjust the distance from the button */
+  left: 50%;
+  transform: translateX(-50%);
+  // background-color: #56a8a1;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+`;
+
+const ResumeButtonWrapper = styled.div`
+  position: relative;
+  &:hover ${OpenCVLabel} {
+    opacity: 1;
   }
 `;
 
@@ -106,9 +132,15 @@ const Navbar = () => {
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/projects">Projects</NavLink>
         <NavLink to="/contact">Contact</NavLink>
-        <ResumeButton href="https://docs.google.com/document/d/1IXXoCEdinoSy6SxsGGpnml8KPea8grdi7iQjDhhkCnM/edit#heading=h.wxvx2glo98ug">
-          Resume
-        </ResumeButton>
+        <ResumeButtonWrapper>
+          <ResumeButton
+            href="https://docs.google.com/document/d/1IXXoCEdinoSy6SxsGGpnml8KPea8grdi7iQjDhhkCnM/edit#heading=h.wxvx2glo98ug"
+            target="_blank" // Add this to open the link in a new tab
+          >
+            Resume
+          </ResumeButton>
+          <OpenCVLabel>Open CV</OpenCVLabel>
+        </ResumeButtonWrapper>
       </NavLinks>
     </NavbarContainer>
   );
