@@ -68,6 +68,12 @@ const Icon = styled.img`
   height: 30px;
 `;
 
+const DescriptionText = styled.div`
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+`;
+
 function HeroSection() {
   return <>Hi</>;
 }
