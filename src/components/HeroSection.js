@@ -20,14 +20,14 @@ const HeroRow = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; /* Add this line to vertically center the content */
+  align-items: center;
   width: 100%;
 `;
 
 const HeroColumn = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex;
+  align-items: flex-start;
 `;
 
 const HiText = styled.div`
@@ -64,9 +64,10 @@ const IconsRow = styled.div`
   margin-top: 20px;
 `;
 
-const Icon = styled.img`
+const Icon = styled.a`
   width: 30px;
   height: 30px;
+  cursor: pointer;
 `;
 
 const DescriptionText = styled.div`
@@ -77,7 +78,7 @@ const DescriptionText = styled.div`
 `;
 
 const HeroImageContainer = styled.div`
-  flex-shrink: 0; /* Prevent image from shrinking */
+  flex-shrink: 0;
 `;
 
 const HeroImageStyled = styled.img`
@@ -95,10 +96,21 @@ function HeroSection() {
           <SubText>Full Stack Software Engineer</SubText>
           <LocationText>Based in Kenya</LocationText>
           <IconsRow>
-            <Icon src={GithubIcon} alt="GitHub" />
-            <Icon src={LinkedInIcon} alt="LinkedIn" />
-            <Icon src={XIcon} alt="Twitter" />
-            <Icon src={EmailIcon} alt="Email" />
+            <Icon href="https://github.com/Vkerubo" target="_blank">
+              <img src={GithubIcon} alt="GitHub" />
+            </Icon>
+            <Icon
+              href="https://linkedin.com/in/valentinekerubo"
+              target="_blank"
+            >
+              <img src={LinkedInIcon} alt="LinkedIn" />
+            </Icon>
+            <Icon href="https://twitter.com/Kerubo_____" target="_blank">
+              <img src={XIcon} alt="Twitter" />
+            </Icon>
+            <Icon href="mailto:kerubovalentine1@gmail.com">
+              <img src={EmailIcon} alt="Email" />
+            </Icon>
           </IconsRow>
           <DescriptionText>
             👩‍💻 Crafting digital dreams | Lifelong learner | Your go-to developer
