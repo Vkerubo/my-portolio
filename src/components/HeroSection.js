@@ -24,6 +24,14 @@ const HeroRow = styled.div`
 `;
 
 
+const HeroColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+
+
 function HeroSection() {
     return (
         <>Hi</>
