@@ -63,6 +63,11 @@ const IconsRow = styled.div`
   margin-top: 20px;
 `;
 
+const Icon = styled.img`
+  width: 30px;
+  height: 30px;
+`;
+
 function HeroSection() {
   return <>Hi</>;
 }
