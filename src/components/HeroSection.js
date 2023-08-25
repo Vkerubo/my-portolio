@@ -73,6 +73,7 @@ const DescriptionText = styled.div`
   font-size: 16px;
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 69px;
 `;
 
 const HeroImageContainer = styled.div`
