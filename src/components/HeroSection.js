@@ -42,6 +42,14 @@ const NameText = styled.div`
   margin-top: 10px;
 `;
 
+const SubText = styled.div`
+  font-size: 64px;
+  color: #56a8a1;
+  font-weight: bold;
+  margin-top: 10px;
+`;
+
+
 
 function HeroSection() {
     return (
