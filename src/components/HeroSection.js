@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import HeroImage from "../components/assets/Coding-amico (2) 1.png";
 import GithubIcon from "../components/assets/GitHub.png";
 import LinkedInIcon from "../components/assets/LinkedIn Circled.png";
@@ -20,13 +20,14 @@ const HeroRow = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center; /* Add this line to vertically center the content */
   width: 100%;
 `;
 
 const HeroColumn = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex;
 `;
 
 const HiText = styled.div`
@@ -74,8 +75,42 @@ const DescriptionText = styled.div`
   margin-top: 20px;
 `;
 
+const HeroImageContainer = styled.div`
+  flex-shrink: 0; /* Prevent image from shrinking */
+`;
+
+const HeroImageStyled = styled.img`
+  width: 307px;
+  height: 281px;
+`;
+
 function HeroSection() {
-  return <>Hi</>;
+  return (
+    <HeroContainer>
+      <HeroRow>
+        <HeroColumn>
+          <HiText>Hi, my name is</HiText>
+          <NameText>Valentine Kerubo</NameText>
+          <SubText>Full Stack Software Engineer</SubText>
+          <LocationText>Based in Kenya</LocationText>
+          <IconsRow>
+            <Icon src={GithubIcon} alt="GitHub" />
+            <Icon src={LinkedInIcon} alt="LinkedIn" />
+            <Icon src={XIcon} alt="Twitter" />
+            <Icon src={EmailIcon} alt="Email" />
+          </IconsRow>
+          <DescriptionText>
+            👩‍💻 Crafting digital dreams | Lifelong learner | Your go-to developer
+            for amazing projects 🚀 | Passionate about mentoring women in tech
+            💪 | Let's build something incredible together, hire me!
+          </DescriptionText>
+        </HeroColumn>
+        <HeroImageContainer>
+          <HeroImageStyled src={HeroImage} alt="Coding Hero" />
+        </HeroImageContainer>
+      </HeroRow>
+    </HeroContainer>
+  );
 }
 
 export default HeroSection;
