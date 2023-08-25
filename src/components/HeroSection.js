@@ -30,6 +30,17 @@ const HeroColumn = styled.div`
   align-items: center;
 `;
 
+const HiText = styled.div`
+  font-size: 16px;
+  color: #a1e4d3;
+`;
+
+const NameText = styled.div`
+  font-size: 64px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+`;
 
 
 function HeroSection() {
