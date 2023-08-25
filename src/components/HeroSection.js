@@ -23,7 +23,6 @@ const HeroRow = styled.div`
   width: 100%;
 `;
 
-
 const HeroColumn = styled.div`
   display: flex;
   flex-direction: column;
@@ -49,12 +48,23 @@ const SubText = styled.div`
   margin-top: 10px;
 `;
 
+const LocationText = styled.div`
+  font-size: 64px;
+  color: #8891b0;
+  font-weight: bold;
+  margin-top: 10px;
+`;
 
+const IconsRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+  margin-top: 20px;
+`;
 
 function HeroSection() {
-    return (
-        <>Hi</>
-    );
-};
+  return <>Hi</>;
+}
 
 export default HeroSection;
