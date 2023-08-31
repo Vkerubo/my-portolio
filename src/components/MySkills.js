@@ -187,56 +187,75 @@ function MySkills() {
             <FrontendTitle>Backend Developer</FrontendTitle>
             <DescriptionColumn>
               <SkillDescription>
-                - I have a strong understanding of the frontend development
-                process and I’m capable of crafting websites from the ground up.
+                - I have a strong understanding of the backend development process
+                and I can build any website from scratch.
               </SkillDescription>
               <SkillDescription>- I have experience with:</SkillDescription>
             </DescriptionColumn>
           </FrontendRow>
           <SkillList>
             <SkillListItem>
-              <SkillIcon src={HtmlIcon} alt="HTML5" />
-              HTML5
+              <SkillIcon src={RubyIcon} alt="Ruby" />
+              Ruby
             </SkillListItem>
             <SkillListItem>
-              <SkillIcon src={CSS3Icon} alt="CSS3" />
-              CSS3
+              <SkillIcon src={RailsIcon} alt="Rails" />
+              Rails
             </SkillListItem>
             <SkillListItem>
-              <SkillIcon src={JavascriptIcon} alt="JavaScript" />
-              JavaScript
+              <SkillIcon src={PostgresQLIcon} alt="PostresQL" />
+              PostgresQL
             </SkillListItem>
             <SkillListItem>
-              <SkillIcon src={ReactIcon} alt="React" />
-              React
-            </SkillListItem>
-            <SkillListItem>
-              <SkillIcon src={FigmaIcon} alt="Figma" />
-              Figma
-            </SkillListItem>
-            <SkillListItem>
-              <SkillIcon
-                src={ResponsiveWebsitesIcon}
-                alt="Responsive websites"
-              />
-              ResponsiveWebsites
-            </SkillListItem>
-            <SkillListItem>
-              <SkillIcon src={MaterialUIIcon} alt="Material UI" />
-              Material UI
-            </SkillListItem>
-            <SkillListItem>
-              <SkillIcon src={TailwindIcon} alt="Tailwind css" />
-              Tailwind CSS
+              <SkillIcon src={MySQLIcon} alt="MySQL" />
+              MySQL
             </SkillListItem>
             <SkillListItem>
               <SkillIcon src={RegexIcon} alt="Regex" />
               Regex
             </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={RESTfulAPIsIcon} alt="RESTful APIs" />
+              RESTful APIs
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={RSpecIcon} alt="RSpec" />
+              RSpec
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={SinatraIcon} alt="Sinatra" />
+              Sinatra
+            </SkillListItem>
           </SkillList>
         </Column3>
-        <Column4></Column4>
-        <Column4></Column4>
+        <Column4>
+          <FrontendRow>
+            <FrontendTitle>Database Design</FrontendTitle>
+            <DescriptionColumn>
+              <SkillDescription>
+                - I have a strong understanding of the database design process and
+                I can build any database from scratch.
+              </SkillDescription>
+              <SkillDescription>
+                - I have experience with MySQL & PostgresSQL.
+              </SkillDescription>
+            </DescriptionColumn>
+          </FrontendRow>
+        </Column4>
+        <Column4>
+          <FrontendRow>
+            <FrontendTitle>Content Writing</FrontendTitle>
+            <DescriptionColumn>
+              <SkillDescription>
+                - I have a strong understanding of the content writing process and
+                I can write any content from scratch. My experience encompasses
+                the realm of crafting articles, blogs, and essays. Currently, I
+                actively maintain a blog on Hashnode, where I share my insights
+                and expertise. Explore my writing.
+              </SkillDescription>
+            </DescriptionColumn>
+          </FrontendRow>
+        </Column4>
       </OuterContainer>
     </MySkillsContainer>
   );
