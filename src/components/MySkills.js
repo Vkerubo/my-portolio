@@ -39,7 +39,7 @@ const OuterContainer = styled.div`
 `;
 
 const Column3 = styled.div`
-  width: 1511px;
+  width: 1200px;
   height: 193px;
   flex-shrink: 0;
   border-radius: 20px;
@@ -49,7 +49,7 @@ const Column3 = styled.div`
 `;
 
 const Column4 = styled.div`
-  width: 1511px;
+  width: 1200px;
   height: 103px;
   flex-shrink: 0;
   border-radius: 20px;
@@ -92,7 +92,7 @@ const SkillDescription = styled.div`
   text-align: flex;
   margin-top: 10px;
   color: #0a1930;
-//   margin-left: 200px;
+  //   margin-left: 200px;
 `;
 
 const FrontendRow = styled.div`
@@ -108,7 +108,6 @@ const DescriptionColumn = styled.div`
   align-items: flex-start;
   width: 100%;
 `;
-
 
 function MySkills() {
   return (
