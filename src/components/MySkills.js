@@ -22,6 +22,7 @@ const Column1 = styled.div`
   font-size: 40px;
   font-weight: 700;
   color: #0a1930;
+  margin-top: 20px;
 `;
 
 const Column2 = styled.div`
@@ -29,6 +30,8 @@ const Column2 = styled.div`
   color: #0a1930;
   font-family: "Sen", sans-serif;
   font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 `;
 
 const OuterContainer = styled.div`
@@ -36,22 +39,76 @@ const OuterContainer = styled.div`
 `;
 
 const Column3 = styled.div`
-  width: 1111px;
+  width: 1511px;
   height: 193px;
   flex-shrink: 0;
   border-radius: 20px;
-  background: #a1e4d3;
-  margin-bottom:40px;
+  border-radius: 20px;
+  background: rgba(161, 228, 211, 0.14);
+  margin-bottom: 40px;
 `;
 
 const Column4 = styled.div`
-  width: 1111px;
+  width: 1511px;
   height: 103px;
   flex-shrink: 0;
   border-radius: 20px;
-  background: #a1e4d3;
-  margin-bottom: 40px;
+  border-radius: 20px;
+  background: rgba(161, 228, 211, 0.14);
+  margin<skilllist>-bottom: 40px;
 `;
+
+const FrontendTitle = styled.div`
+  font-family: "Sen", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;<SkillList>
+  white-space: nowrap;
+`;
+
+const SkillList = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+`;
+
+const SkillListItem = styled.li`
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #0a1930;
+`;
+
+const SkillIcon = styled.img`
+  width: 40px;
+  height: 40px;
+`;
+
+const SkillDescription = styled.div`
+  font-size: 16px;
+  text-align: flex;
+  margin-top: 10px;
+  color: #0a1930;
+//   margin-left: 200px;
+`;
+
+const FrontendRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex;
+  width: 100%;
+`;
+
+const DescriptionColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+`;
+
 
 function MySkills() {
   return (
@@ -59,11 +116,41 @@ function MySkills() {
       <Column1>My Skills</Column1>
       <Column2>
         As a full-stack developer with expertise across 4 diverse design fields,
-        I'm your go-to solution for any project. Challenges are my forte; let's
-        bring your vision to life! 💼🎨
+        I'm your go-to solution for any project. <br /> Challenges are my forte;
+        let's bring your vision to life! 💼🎨
       </Column2>
       <OuterContainer>
-        <Column3></Column3>
+        <Column3>
+          <FrontendRow>
+            <FrontendTitle>Frontend Developer</FrontendTitle>
+            <DescriptionColumn>
+              <SkillDescription>
+                - I have a strong understanding of the frontend development
+                process and I’m capable of crafting websites from the ground up.
+              </SkillDescription>
+              <SkillDescription>- I have experience with:</SkillDescription>
+            </DescriptionColumn>
+          </FrontendRow>
+          <SkillList>
+            <SkillListItem>
+              <SkillIcon src={HtmlIcon} alt="HTML5" />
+              HTML5
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={CSS3Icon} alt="CSS3" />
+              CSS3
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={JavascriptIcon} alt="JavaScript" />
+              JavaScript
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={ReactIcon} alt="React" />
+              React
+            </SkillListItem>
+            {/* Add more skill items here */}
+          </SkillList>
+        </Column3>
         <Column3></Column3>
         <Column4></Column4>
         <Column4></Column4>
