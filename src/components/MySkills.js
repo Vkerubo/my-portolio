@@ -30,12 +30,13 @@ const Column1 = styled.div`
   font-weight: 700;
   color: #0a1930;
   margin-top: 20px;
+  font-family: Sen;
 `;
 
 const Column2 = styled.div`
   text-align: center;
   color: #0a1930;
-  font-family: "Sen", sans-serif;
+  font-family: Sen;
   font-size: 14px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -50,14 +51,15 @@ const Column3 = styled.div`
   height: 153px;
   flex-shrink: 0;
   background: rgba(161, 228, 211, 0.14);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 `;
 
 const Column4 = styled.div`
   width: 1200px;
-  height: 103px;
+  height: 83px;
   flex-shrink: 0;
   background: rgba(161, 228, 211, 0.14);
+  margin-bottom: 20px;
   margin<skilllist>-bottom: 40px;
 `;
 
@@ -68,6 +70,7 @@ const FrontendTitle = styled.div`
   //margin-left: 20px;<SkillList>
   white-space: nowrap;
   margin-top: 10px;
+  font-family: Sen;
 `;
 
 const SkillList = styled.ul`
@@ -96,6 +99,8 @@ const SkillDescription = styled.div`
   text-align: flex;
   margin-top: 10px;
   color: #0a1930;
+  line-height: 1.5;
+  font-family: Sen;
   //   margin-left: 200px;
 `;
 
@@ -118,11 +123,17 @@ const DescriptionColumn = styled.div`
 const ExploreLink = styled.a`
   text-decoration: underline;
   color: #128e84;
+  font-family: Sen;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
+  white-space: nowrap;
 
   &:hover {
-    color: #fff; /* Change the color on hover */
+    color: #fff;
+    text-decoration: none; /* Remove the underline on hover */
+    background-color: #56a8a1; /* Add a background color on hover */
+    padding: 4px 8px; /* Add padding for better visual feedback */
+    border-radius: 4px; /* Add rounded corners for better visual feedback */
   }
 `;
 
@@ -254,7 +265,7 @@ function MySkills() {
             <FrontendTitle>Content Writing</FrontendTitle>
             <DescriptionColumn>
               <SkillDescription>
-                I have a strong understanding of the content writing process and
+                - I have a strong understanding of the content writing process and
                 I can write any content from scratch. My experience encompasses
                 the realm of crafting articles, blogs, and essays. Currently, I
                 actively maintain a blog on Hashnode, where I share my insights
