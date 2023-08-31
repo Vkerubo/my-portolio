@@ -117,7 +117,7 @@ const DescriptionColumn = styled.div`
 
 const ExploreLink = styled.a`
   text-decoration: underline;
-  color: #56a8a1;
+  color: #128e84;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
 
@@ -194,8 +194,8 @@ function MySkills() {
             <FrontendTitle>Backend Developer</FrontendTitle>
             <DescriptionColumn>
               <SkillDescription>
-                - I have a strong understanding of the backend development process
-                and I can build any website from scratch.
+                - I have a strong understanding of the backend development
+                process and I can build any website from scratch.
               </SkillDescription>
               <SkillDescription>- I have experience with:</SkillDescription>
             </DescriptionColumn>
@@ -240,8 +240,8 @@ function MySkills() {
             <FrontendTitle>Database Design</FrontendTitle>
             <DescriptionColumn>
               <SkillDescription>
-                - I have a strong understanding of the database design process and
-                I can build any database from scratch.
+                - I have a strong understanding of the database design process
+                and I can build any database from scratch.
               </SkillDescription>
               <SkillDescription>
                 - I have experience with MySQL & PostgresSQL.
@@ -254,11 +254,18 @@ function MySkills() {
             <FrontendTitle>Content Writing</FrontendTitle>
             <DescriptionColumn>
               <SkillDescription>
-                - I have a strong understanding of the content writing process and
+                I have a strong understanding of the content writing process and
                 I can write any content from scratch. My experience encompasses
                 the realm of crafting articles, blogs, and essays. Currently, I
                 actively maintain a blog on Hashnode, where I share my insights
-                and expertise. Explore my writing.
+                and expertise.{" "}
+                <ExploreLink
+                  href="https://hashnode.com/@Kerubo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Explore my writing.
+                </ExploreLink>
               </SkillDescription>
             </DescriptionColumn>
           </FrontendRow>
