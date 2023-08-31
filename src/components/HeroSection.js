@@ -36,21 +36,21 @@ const HiText = styled.div`
 `;
 
 const NameText = styled.div`
-  font-size: 64px;
+  font-size: 60px;
   font-weight: bold;
   color: #fff;
   margin-top: 10px;
 `;
 
 const SubText = styled.div`
-  font-size: 64px;
+  font-size: 60px;
   color: #56a8a1;
   font-weight: bold;
   margin-top: 10px;
 `;
 
 const LocationText = styled.div`
-  font-size: 64px;
+  font-size: 60px;
   color: #8891b0;
   font-weight: bold;
   margin-top: 10px;
@@ -91,16 +91,27 @@ const Icon = styled.a`
   }
 `;
 
-
 const DescriptionText = styled.div`
+  color: #fff;
+  font-family: Sen;
   font-size: 16px;
-  text-align: center;
-  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   margin-bottom: 69px;
+  margin-top: 20px;
+  line-height: 1.5;
+  /* Highlight "hire me" with a background color */
+  > u {
+    text-decoration: none;
+    font-weight: bold;
+    //background: linear-gradient(transparent 50%, #000 50%);
+  }
 `;
 
 const HeroImageContainer = styled.div`
-  flex-shrink: 0;
+  //flex-shrink: 0;
+  margin-left: 2px;
 `;
 
 const HeroImageStyled = styled.img`
@@ -148,9 +159,11 @@ function HeroSection() {
           </IconsRow>
 
           <DescriptionText>
-            👩‍💻 Crafting digital dreams | Lifelong learner | Your go-to developer
-            for amazing projects 🚀 | Passionate about mentoring women in tech
-            💪 | Let's build something incredible together, hire me!
+            👩‍💻 Crafting digital dreams &nbsp;&nbsp;|&nbsp;&nbsp; Lifelong
+            learner &nbsp;&nbsp;|&nbsp;&nbsp; Your go-to developer for amazing
+            projects 🚀 &nbsp;&nbsp;|&nbsp;&nbsp; Passionate about mentoring
+            women in tech 💪 &nbsp;&nbsp;|&nbsp;&nbsp;
+            Let's build something incredible together, <u>hire me!</u>
           </DescriptionText>
         </HeroColumn>
         <HeroImageContainer>
