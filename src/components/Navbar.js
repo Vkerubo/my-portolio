@@ -95,7 +95,7 @@ const ResumeButton = styled.a`
     color: #fff;
     background-color: #56a8a1;
     transform: perspective(400px) rotateX(10deg); /* Add hover 3D effect */
-    box-shadow: 0 4px 6px rgba(255, 200, 255, 0.9); /* Add box-shadow for depth */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.9); /* Add box-shadow for depth */
   }
 `;
 
@@ -106,7 +106,7 @@ const OpenCVLabel = styled.span`
   transform: translateX(-50%);
   // background-color: #56a8a1;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: normal;
   padding: 5px 10px;
   border-radius: 4px;
@@ -139,7 +139,7 @@ const Navbar = () => {
           >
             Resume
           </ResumeButton>
-          <OpenCVLabel>Open CV</OpenCVLabel>
+          <OpenCVLabel>Open CV 👇</OpenCVLabel>
         </ResumeButtonWrapper>
       </NavLinks>
     </NavbarContainer>
