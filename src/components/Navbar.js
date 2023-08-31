@@ -16,6 +16,7 @@ const Header = styled.h1`
   font-size: 16px;
   font-weight: regular;
   margin: 0;
+  font-family: sen;
 `;
 
 const NavLinks = styled.ul`
@@ -23,8 +24,9 @@ const NavLinks = styled.ul`
   display: flex;
   gap: 50px;
   margin-bottom: 1px;
-  margin-top:40px;
-  align-items: center; /
+  margin-top: 40px;
+  align-items: center;
+  font-family: sen;
 `;
 
 const NavLink = styled(Link)`
