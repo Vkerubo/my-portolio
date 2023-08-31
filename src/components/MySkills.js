@@ -49,8 +49,6 @@ const Column3 = styled.div`
   width: 1200px;
   height: 153px;
   flex-shrink: 0;
-  // border-radius: 20px;
-  // border-radius: 20px;
   background: rgba(161, 228, 211, 0.14);
   margin-bottom: 40px;
 `;
@@ -59,8 +57,6 @@ const Column4 = styled.div`
   width: 1200px;
   height: 103px;
   flex-shrink: 0;
-  // border-radius: 20px;
-  // border-radius: 20px;
   background: rgba(161, 228, 211, 0.14);
   margin<skilllist>-bottom: 40px;
 `;
@@ -117,6 +113,17 @@ const DescriptionColumn = styled.div`
   align-items: flex-start;
   //width: 100%;
   margin-left: 15px;
+`;
+
+const ExploreLink = styled.a`
+  text-decoration: underline;
+  color: #56a8a1;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: #fff; /* Change the color on hover */
+  }
 `;
 
 function MySkills() {
