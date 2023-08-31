@@ -9,6 +9,13 @@ import ResponsiveWebsitesIcon from "../components/assets/responsive-design 1.png
 import MaterialUIIcon from "../components/assets/icons8-material-ui-48 1.png";
 import TailwindIcon from "../components/assets/tailwind-css 1.png";
 import RegexIcon from "../components/assets/icons8-regular-expressions-32 1.png";
+import RubyIcon from "../components/assets/ruby.png";
+import RailsIcon from "../components/assets/rails.png";
+import PostgresQLIcon from "../components/assets/postgresql (1).png";
+import MySQLIcon from "../components/assets/mysql (1).png";
+import RESTfulAPIsIcon from "../components/assets/icons8-rest-api-50.png";
+import RSpecIcon from "../components/assets/rspec.svg";
+import SinatraIcon from "../components/assets/icons8-frank-sinatra-64.png";
 
 const MySkillsContainer = styled.div`
   display: flex;
@@ -40,10 +47,10 @@ const OuterContainer = styled.div`
 
 const Column3 = styled.div`
   width: 1200px;
-  height: 193px;
+  height: 153px;
   flex-shrink: 0;
-  border-radius: 20px;
-  border-radius: 20px;
+  // border-radius: 20px;
+  // border-radius: 20px;
   background: rgba(161, 228, 211, 0.14);
   margin-bottom: 40px;
 `;
@@ -52,8 +59,8 @@ const Column4 = styled.div`
   width: 1200px;
   height: 103px;
   flex-shrink: 0;
-  border-radius: 20px;
-  border-radius: 20px;
+  // border-radius: 20px;
+  // border-radius: 20px;
   background: rgba(161, 228, 211, 0.14);
   margin<skilllist>-bottom: 40px;
 `;
@@ -62,8 +69,9 @@ const FrontendTitle = styled.div`
   font-family: "Sen", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  margin-right: 20px;<SkillList>
+  //margin-left: 20px;<SkillList>
   white-space: nowrap;
+  margin-top: 10px;
 `;
 
 const SkillList = styled.ul`
@@ -71,7 +79,7 @@ const SkillList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 `;
 
 const SkillListItem = styled.li`
@@ -99,14 +107,16 @@ const FrontendRow = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex;
-  width: 100%;
+  //width: 100%;
+  margin-top: 10px;
 `;
 
 const DescriptionColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  //width: 100%;
+  margin-left: 15px;
 `;
 
 function MySkills() {
@@ -147,10 +157,84 @@ function MySkills() {
               <SkillIcon src={ReactIcon} alt="React" />
               React
             </SkillListItem>
-            {/* Add more skill items here */}
+            <SkillListItem>
+              <SkillIcon src={FigmaIcon} alt="Figma" />
+              Figma
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon
+                src={ResponsiveWebsitesIcon}
+                alt="Responsive websites"
+              />
+              ResponsiveWebsites
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={MaterialUIIcon} alt="Material UI" />
+              Material UI
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={TailwindIcon} alt="Tailwind css" />
+              Tailwind CSS
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={RegexIcon} alt="Regex" />
+              Regex
+            </SkillListItem>
           </SkillList>
         </Column3>
-        <Column3></Column3>
+        <Column3>
+          <FrontendRow>
+            <FrontendTitle>Backend Developer</FrontendTitle>
+            <DescriptionColumn>
+              <SkillDescription>
+                - I have a strong understanding of the frontend development
+                process and I’m capable of crafting websites from the ground up.
+              </SkillDescription>
+              <SkillDescription>- I have experience with:</SkillDescription>
+            </DescriptionColumn>
+          </FrontendRow>
+          <SkillList>
+            <SkillListItem>
+              <SkillIcon src={HtmlIcon} alt="HTML5" />
+              HTML5
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={CSS3Icon} alt="CSS3" />
+              CSS3
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={JavascriptIcon} alt="JavaScript" />
+              JavaScript
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={ReactIcon} alt="React" />
+              React
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={FigmaIcon} alt="Figma" />
+              Figma
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon
+                src={ResponsiveWebsitesIcon}
+                alt="Responsive websites"
+              />
+              ResponsiveWebsites
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={MaterialUIIcon} alt="Material UI" />
+              Material UI
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={TailwindIcon} alt="Tailwind css" />
+              Tailwind CSS
+            </SkillListItem>
+            <SkillListItem>
+              <SkillIcon src={RegexIcon} alt="Regex" />
+              Regex
+            </SkillListItem>
+          </SkillList>
+        </Column3>
         <Column4></Column4>
         <Column4></Column4>
       </OuterContainer>
