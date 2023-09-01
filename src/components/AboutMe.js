@@ -93,7 +93,7 @@ function AboutMe() {
           I'm a certified full-stack developer with a drive for crafting
           innovative and meaningful applications. My journey began with rigorous
           training at{" "}
-          <a href="https://moringaschool.com/" style={{ color: "2C8F87" }}>
+          <a href="https://moringaschool.com/" style={{ color: "#128e84" }}>
             Moringa School
           </a>
           , where I acquired essential skills and hands-on experience in

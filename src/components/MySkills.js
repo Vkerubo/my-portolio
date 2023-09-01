@@ -58,6 +58,10 @@ const Column3 = styled.div`
   flex-shrink: 0;
   background: rgba(161, 228, 211, 0.14);
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    height: 189px;
+  }
 `;
 
 const Column4 = styled.div`
@@ -67,6 +71,10 @@ const Column4 = styled.div`
   flex-shrink: 0;
   background: rgba(161, 228, 211, 0.14);
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    height: 135px;
+  }
 `;
 
 const FrontendTitle = styled.div`
@@ -104,7 +112,7 @@ const SkillListItem = styled.li`
 
   /* Decrease skill list item size for smaller screens */
   @media (max-width: 768px) {
-    font-size: 9px;
+    font-size: 10px;
   }
 `;
 
@@ -128,7 +136,7 @@ const SkillDescription = styled.div`
   font-family: Sen;
 
   @media (max-width: 768px) {
-    font-size: 11px;
+    font-size: 14px;
   }
 `;
 

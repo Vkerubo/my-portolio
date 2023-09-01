@@ -40,6 +40,10 @@ const NameText = styled.div`
   font-weight: bold;
   color: #fff;
   margin-top: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 39px;
+  }
 `;
 
 const SubText = styled.div`
@@ -47,6 +51,10 @@ const SubText = styled.div`
   color: #56a8a1;
   font-weight: bold;
   margin-top: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
 `;
 
 const LocationText = styled.div`
@@ -54,6 +62,10 @@ const LocationText = styled.div`
   color: #8891b0;
   font-weight: bold;
   margin-top: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
 `;
 
 const IconsRow = styled.div`
@@ -112,11 +124,17 @@ const DescriptionText = styled.div`
 const HeroImageContainer = styled.div`
   //flex-shrink: 0;
   margin-left: 2px;
+
 `;
 
 const HeroImageStyled = styled.img`
   width: 307px;
   height: 281px;
+
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+  }
 `;
 
 function HeroSection() {
