@@ -16,7 +16,6 @@ import MySQLIcon from "../components/assets/mysql (1).png";
 import RESTfulAPIsIcon from "../components/assets/icons8-rest-api-50.png";
 import RSpecIcon from "../components/assets/rspec.svg";
 import SinatraIcon from "../components/assets/icons8-frank-sinatra-64.png";
-import css from "styled-components";
 
 const MySkillsContainer = styled.div`
   display: flex;
@@ -45,10 +44,16 @@ const Column2 = styled.div`
 
 const OuterContainer = styled.div`
   margin: 0 20px;
+
+  /* Adjust styles for smaller screens */
+  @media (max-width: 768px) {
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
 `;
 
 const Column3 = styled.div`
-  width: 1200px;
+  width: 100%; /* Full width on smaller screens */
+  max-width: 1200px; /* Adjust the maximum width for smaller screens */
   height: 153px;
   flex-shrink: 0;
   background: rgba(161, 228, 211, 0.14);
@@ -56,22 +61,25 @@ const Column3 = styled.div`
 `;
 
 const Column4 = styled.div`
-  width: 1200px;
+  width: 100%; /* Full width on smaller screens */
+  max-width: 1200px; /* Adjust the maximum width for smaller screens */
   height: 83px;
   flex-shrink: 0;
   background: rgba(161, 228, 211, 0.14);
   margin-bottom: 20px;
-  margin<skilllist>-bottom: 40px;
 `;
 
 const FrontendTitle = styled.div`
   font-family: "Sen", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  //margin-left: 20px;<SkillList>
   white-space: nowrap;
   margin-top: 10px;
   font-family: Sen;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `;
 
 const SkillList = styled.ul`
@@ -80,6 +88,11 @@ const SkillList = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+
+  /* Decrease font size and skill list item size for smaller screens */
+  @media (max-width: 768px) {
+    font-size: 1px;
+  }
 `;
 
 const SkillListItem = styled.li`
@@ -88,11 +101,22 @@ const SkillListItem = styled.li`
   flex-direction: column;
   align-items: center;
   color: #0a1930;
+
+  /* Decrease skill list item size for smaller screens */
+  @media (max-width: 768px) {
+    font-size: 9px;
+  }
 `;
 
 const SkillIcon = styled.img`
   width: 40px;
   height: 40px;
+
+  /* Adjust image size for smaller screens */
+  @media (max-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const SkillDescription = styled.div`
@@ -102,14 +126,16 @@ const SkillDescription = styled.div`
   color: #0a1930;
   line-height: 1.5;
   font-family: Sen;
-  //   margin-left: 200px;
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+  }
 `;
 
 const FrontendRow = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex;
-  //width: 100%;
   margin-top: 10px;
 `;
 
@@ -117,7 +143,6 @@ const DescriptionColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  //width: 100%;
   margin-left: 15px;
 `;
 
@@ -131,10 +156,10 @@ const ExploreLink = styled.a`
 
   &:hover {
     color: #fff;
-    text-decoration: none; /* Remove the underline on hover */
-    background-color: #56a8a1; /* Add a background color on hover */
-    padding: 4px 8px; /* Add padding for better visual feedback */
-    border-radius: 4px; /* Add rounded corners for better visual feedback */
+    text-decoration: none;
+    background-color: #56a8a1;
+    padding: 4px 8px;
+    border-radius: 4px;
   }
 `;
 
@@ -181,10 +206,7 @@ function MySkills() {
               Figma
             </SkillListItem>
             <SkillListItem>
-              <SkillIcon
-                src={ResponsiveWebsitesIcon}
-                alt="Responsive websites"
-              />
+              <SkillIcon src={ResponsiveWebsitesIcon} alt="Responsive websites" />
               ResponsiveWebsites
             </SkillListItem>
             <SkillListItem>
