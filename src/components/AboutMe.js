@@ -20,6 +20,15 @@ const AboutMeTitle = styled.div`
   line-height: normal;
 `;
 
+const ImageContainer = styled.div`
+  width: 292px;
+  height: 346px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 20px;
+`;
+
 function AboutMe() {
     return (
         <>Hi</>
