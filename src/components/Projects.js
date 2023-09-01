@@ -17,6 +17,19 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
+const LeftColumn = styled.div`
+  width: 50%;
+`;
+
+const Title = styled.div`
+  color: #2c8f87;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+`;
+
 function Projects() {
   return (
     <>
