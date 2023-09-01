@@ -35,6 +35,12 @@ const AboutMeImageStyled = styled.img`
   object-fit: cover;
 `;
 
+
+const DescriptionContainer = styled.div`
+  flex-grow: 1;
+  padding: 20px;
+`;
+
 function AboutMe() {
     return (
         <>Hi</>
