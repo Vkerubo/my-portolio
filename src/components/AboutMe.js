@@ -51,6 +51,15 @@ const DescriptionTitle = styled.div`
   margin-bottom: 10px;
 `;
 
+const DescriptionText = styled.div`
+  color: #000;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+`;
+
 function AboutMe() {
     return (
         <>Hi</>
