@@ -30,6 +30,16 @@ const Title = styled.div`
   line-height: normal;
 `;
 
+const Description = styled.div`
+  color: #333;
+  font-family: Sen;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+`;
+
 function Projects() {
   return (
     <>
