@@ -40,6 +40,34 @@ const Description = styled.div`
   margin-top: 10px;
 `;
 
+const LiveDemoButton = styled.a`
+  display: inline-flex;
+  height: 22px;
+  font-family: sen;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  padding: 3px 6px 4px 6px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: #56a8a1;
+  background-color: transparent;
+  border: 1px solid #56a8a1;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: #56a8a1;
+    transform: perspective(400px) rotateX(10deg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+`;
+
 function Projects() {
   return (
     <>
