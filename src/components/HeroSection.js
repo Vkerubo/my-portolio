@@ -162,8 +162,8 @@ function HeroSection() {
             👩‍💻 Crafting digital dreams &nbsp;&nbsp;|&nbsp;&nbsp; Lifelong
             learner &nbsp;&nbsp;|&nbsp;&nbsp; Your go-to developer for amazing
             projects 🚀 &nbsp;&nbsp;|&nbsp;&nbsp; Passionate about mentoring
-            women in tech 💪 &nbsp;&nbsp;|&nbsp;&nbsp;
-            Let's build something incredible together, <u>hire me!</u>
+            women in tech 💪 &nbsp;&nbsp;|&nbsp;&nbsp; Let's build something
+            incredible together, <u>hire me!</u>
           </DescriptionText>
         </HeroColumn>
         <HeroImageContainer>
