@@ -68,7 +68,7 @@ const ResumeButton = styled.a`
   font-weight: normal;
   border: 2px solid #a1e4d3;
   padding: 10px 20px;
-  border-radius: 4px;
+  //border-radius: 4px;
   transition: color 0.3s, transform 0.3s, background-color 0.3s; /* Add transform and background-color for transitions */
   display: relative;
 
