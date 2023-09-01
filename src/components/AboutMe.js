@@ -1,6 +1,7 @@
 import React from "react";
 import AboutMeImage from "../components/assets/Val Image.jpeg";
 import { styled } from "styled-components";
+import { Link } from "react-router-dom";
 
 const AboutMeContainer = styled.div`
   display: flex;
@@ -77,6 +78,9 @@ const DescriptionText = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 31px;
+`;
+
+const MoreButton = styled.a`
 `;
 
 function AboutMe() {

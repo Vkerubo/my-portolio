@@ -59,36 +59,7 @@ const NavLink = styled(Link)`
   }
 `;
 
-const ResumeLink = styled(Link)`
-  text-decoration: none;
-  color: #A1E4D3;
-  font-size: 16px;
-  font-weight: normal;
-  transition: color 0.3s;
 
-  &:hover,
-  &:active {
-    color: #fff;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: ;#56a8a1
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s;
-    z-index: -1;
-  }
-
-  &:hover:before,
-  &:active:before {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-`;
 
 const ResumeButton = styled.a`
   text-decoration: none;
@@ -99,7 +70,7 @@ const ResumeButton = styled.a`
   padding: 10px 20px;
   border-radius: 4px;
   transition: color 0.3s, transform 0.3s, background-color 0.3s; /* Add transform and background-color for transitions */
-  display: relative; /* Ensure the button takes only the necessary width */
+  display: relative;
 
   transform: perspective(400px) rotateX(0deg); /* Add initial 3D effect */
 
