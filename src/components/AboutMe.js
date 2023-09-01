@@ -7,13 +7,15 @@ const AboutMeContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: start;
-  gap:10px;
+  margin-left: 70px;
+  gap: 10px;
   padding: 40px;
   background-color: #fff;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: start;
+    margin-left: 20px;
   }
 `;
 
@@ -60,7 +62,7 @@ const DescriptionContainer = styled.div`
 const DescriptionTitle = styled.div`
   color: #c8f87;
   font-family: Montserrat;
-  font-size: 40px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;

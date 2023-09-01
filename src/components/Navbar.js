@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const NavbarContainer = styled.div`
@@ -38,7 +38,7 @@ const NavLinks = styled.ul`
   }
 `;
 
-const NavLink = styled(Link)`
+const NavigateLink = styled(NavLink)`
   text-decoration: none;
   color: #fff;
   font-size: 16px;
@@ -46,20 +46,18 @@ const NavLink = styled(Link)`
   transition: color 0.3s, font-weight 0.3s;
 
   &:hover,
-  &:active {
+  &.active {
     color: #a1e4d3;
-    font-weight: bold;
+    font-weight: normal;
     text-decoration: none;
-    border-bottom: 4px solid #a1e4d3; /* Add this line */
-    padding-bottom: 3px; /* Adjust as needed to control the underline thickness */
+    border-bottom: 2px solid #a1e4d3; /* Add this line */
+    padding-bottom: 2px; /* Adjust as needed to control the underline thickness */
   }
 
   @media (max-width: 768px) {
     font-size: 16px;
   }
 `;
-
-
 
 const ResumeButton = styled.a`
   text-decoration: none;
@@ -113,11 +111,13 @@ const Navbar = () => {
     <NavbarContainer>
       <Header>Valentine Kerubo Oberi</Header>
       <NavLinks>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/blog">Blog</NavLink>
-        <NavLink to="/projects">Projects</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+        <NavigateLink to="/" exact>
+          Home
+        </NavigateLink>
+        <NavigateLink to="/about">About</NavigateLink>
+        <NavigateLink to="/blog">Blog</NavigateLink>
+        <NavigateLink to="/projects">Projects</NavigateLink>
+        <NavigateLink to="/contact">Contact</NavigateLink>
         <ResumeButtonWrapper>
           <ResumeButton
             href="https://docs.google.com/document/d/1IXXoCEdinoSy6SxsGGpnml8KPea8grdi7iQjDhhkCnM/edit#heading=h.wxvx2glo98ug"
