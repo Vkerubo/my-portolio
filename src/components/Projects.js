@@ -68,6 +68,12 @@ const LiveDemoButton = styled.a`
   }
 `;
 
+const ChamaImageStyled = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+`;
+
+
 
 const RightColumn = styled.div`
   width: 50%;
