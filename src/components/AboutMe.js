@@ -80,7 +80,29 @@ const DescriptionText = styled.div`
   line-height: 31px;
 `;
 
-const MoreButton = styled.a`
+const MoreButton = styled(Link)`
+  display: inline-flex;
+  height: 24px;
+  padding: 6px 0px 6px 8px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none; /* Remove underline from the link */
+  color: #fff;
+  background-color: #56a8a1;
+  border-radius: 4px;
+  box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: #56a8a1;
+    transform: perspective(400px) rotateX(10deg);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.9);
+    text-decoration: none; /* Remove underline on hover */
+  }
 `;
 
 function AboutMe() {
@@ -108,6 +130,7 @@ function AboutMe() {
           commitment to enhancing my capabilities and giving back to the
           development community.
         </DescriptionText>
+        <MoreButton to="/about">Keep reading my bio</MoreButton>
       </DescriptionContainer>
     </AboutMeContainer>
   );
