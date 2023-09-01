@@ -54,7 +54,7 @@ const AboutMeImageStyled = styled.img`
 
 const DescriptionContainer = styled.div`
   flex-grow: 1;
-  padding: 20px;
+  padding: 0px;
 `;
 
 const DescriptionTitle = styled.div`
@@ -64,7 +64,7 @@ const DescriptionTitle = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   @media (max-width: 768px) {
     font-size: 25px;
@@ -78,20 +78,25 @@ const DescriptionText = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 31px;
+  margin-bottom: 10px;
 `;
 
 const MoreButton = styled(Link)`
   display: inline-flex;
-  height: 24px;
-  padding: 6px 0px 6px 8px;
+  height: 22px;
+  font-family: sen;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  padding: 3px 6px 4px 6px;
   justify-content: flex-end;
   align-items: center;
   flex-shrink: 0;
   text-decoration: none; /* Remove underline from the link */
-  color: #fff;
-  background-color: #56a8a1;
-  border-radius: 4px;
-  box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #56a8a1;
+  background-color: transparent;
+  border: 1px solid #56a8a1;
+  //box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
     transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
@@ -100,7 +105,7 @@ const MoreButton = styled(Link)`
     color: #fff;
     background-color: #56a8a1;
     transform: perspective(400px) rotateX(10deg);
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     text-decoration: none; /* Remove underline on hover */
   }
 `;
