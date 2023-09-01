@@ -11,6 +11,15 @@ const AboutMeContainer = styled.div`
   background-color: #fff;
 `;
 
+const AboutMeTitle = styled.div`
+  color: #333;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+`;
+
 function AboutMe() {
     return (
         <>Hi</>
