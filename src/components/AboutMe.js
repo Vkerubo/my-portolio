@@ -41,6 +41,16 @@ const DescriptionContainer = styled.div`
   padding: 20px;
 `;
 
+const DescriptionTitle = styled.div`
+  color: #c8f87;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 10px;
+`;
+
 function AboutMe() {
     return (
         <>Hi</>
