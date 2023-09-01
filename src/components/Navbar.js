@@ -17,6 +17,10 @@ const Header = styled.h1`
   font-weight: regular;
   margin: 0;
   font-family: sen;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const NavLinks = styled.ul`
@@ -27,6 +31,11 @@ const NavLinks = styled.ul`
   margin-top: 40px;
   align-items: center;
   font-family: sen;
+
+  @media (max-width: 768px) {
+    gap: 18px;
+    margin-top: 25px;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -43,6 +52,10 @@ const NavLink = styled(Link)`
     text-decoration: none;
     border-bottom: 4px solid #a1e4d3; /* Add this line */
     padding-bottom: 3px; /* Adjust as needed to control the underline thickness */
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
   }
 `;
 
