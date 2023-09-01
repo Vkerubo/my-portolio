@@ -16,6 +16,7 @@ import MySQLIcon from "../components/assets/mysql (1).png";
 import RESTfulAPIsIcon from "../components/assets/icons8-rest-api-50.png";
 import RSpecIcon from "../components/assets/rspec.svg";
 import SinatraIcon from "../components/assets/icons8-frank-sinatra-64.png";
+import css from "styled-components";
 
 const MySkillsContainer = styled.div`
   display: flex;
