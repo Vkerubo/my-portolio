@@ -47,6 +47,24 @@ const Description = styled.div`
   flex-shrink: 0;
 `;
 
+const ContactMe = styled.div`
+  color: #333;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 574px;
+  height: 69px;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid #56a8a1;
+  }
+`;
+
 function Mentorship() {
   return <div>Mentorship</div>;
 }
