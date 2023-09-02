@@ -22,6 +22,12 @@ const ImageColumn = styled.div`
   flex-shrink: 0;
 `;
 
+const BlogImageStyled = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
 function Blog() {
   return <>Hi</>;
 }
