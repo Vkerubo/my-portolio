@@ -70,6 +70,18 @@ const FollowHashnodeColumn = styled.div`
   align-items: flex-start;
 `;
 
+const FollowHashnodeText = styled.div`
+  color: #56a8a1;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: underline;
+  background: #56a8a1;
+  width: 165.003px;
+  height: 1px;
+`;
 
 function Blog() {
   return <>Hi</>;
