@@ -48,8 +48,40 @@ const FollowButton = styled.a`
   position: absolute; /* Position the button absolutely within the image container */
   top: 213px; /* Position from the top */
   left: 175px; /* Position from the left */
-  text-decoration: none; /*Remove default link underline*/
+  text-decoration: none; /* Remove default link underline */
+
+  color: #fff;
+  background-color: #333;
+  transform: perspective(400px) rotateX(10deg) scale(1.1);
+  box-shadow: 0px 4px 4px 0px #56a8a1;
+  text-decoration: none;
+  animation: bounce 0.5s ease infinite; /* Add the bounce animation here */
+  transition: transform 0.3s ease-in-out, background-color 0.3s; /* Add transitions */
+
+  &:hover,
+  &:active {
+    background-color: #56a8a1;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px); /* Adjust the bounce height here */
+    }
+    60% {
+      transform: translateY(-5px); /* Adjust the bounce height here */
+    }
+  }
 `;
+
 
 const BlogLogoStyled = styled.img`
   position: absolute; /* Position the button absolutely within the image container */
@@ -157,6 +189,16 @@ const FollowHashnodeText = styled.a`
 
   @media (max-width: 768px) {
     margin-top: 1px;
+  }
+
+  &:hover,
+  &:active {
+    background-color: #56a8a1;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #56a8a1;
+    padding: 5px 10px;
+    border-radius: 5px;
   }
 `;
 
