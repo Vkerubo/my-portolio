@@ -32,7 +32,7 @@ const BlogImageStyled = styled.img`
   object-fit: cover;
 `;
 
-const FollowButton = styled.div`
+const FollowButton = styled.a`
   background: #333;
   box-shadow: 0px 4px 4px 0px #56a8a1;
   display: flex;
@@ -48,6 +48,7 @@ const FollowButton = styled.div`
   position: absolute; /* Position the button absolutely within the image container */
   top: 213px; /* Position from the top */
   left: 175px; /* Position from the left */
+  text-decoration: none; /*Remove default link underline*/
 `;
 
 const BlogLogoStyled = styled.img`
@@ -64,6 +65,15 @@ const BlogNavStyled = styled.img`
   width: 100px;
 `;
 
+const BlogProfile = styled.img`
+  margin-top: 50px; /* Position from the top */
+  width: 100px;
+
+  @media (max-width: 768px) {
+    margin-top: 1px;
+  }
+`;
+
 const BackgroundContainer = styled.div`
   background: rgba(161, 228, 211, 0.14);
   display: flex;
@@ -78,9 +88,9 @@ const BackgroundContainer = styled.div`
     flex-direction: column;
     align-items: start;
     gap: 10px;
-    margin-top: 70px;
+    margin-top: 10px;
     max-width: 100%;
-    height: 120px;
+    height: 170px;
     margin-left: 0px;
   }
 `;
@@ -126,7 +136,7 @@ const FollowHashnodeColumn = styled.div`
   flex-direction: column;
   //justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 1px;
 
   @media (max-width: 768px) {
     margin-top: 0px;
@@ -135,7 +145,7 @@ const FollowHashnodeColumn = styled.div`
   }
 `;
 
-const FollowHashnodeText = styled.div`
+const FollowHashnodeText = styled.a`
   color: #56a8a1;
   font-family: Montserrat;
   font-size: 15px;
@@ -143,10 +153,10 @@ const FollowHashnodeText = styled.div`
   font-weight: 500;
   line-height: normal;
   text-decoration: underline;
-  margin-top: 40px;
+  margin-top: 10px;
 
   @media (max-width: 768px) {
-    margin-top: 0px;
+    margin-top: 1px;
   }
 `;
 
@@ -155,9 +165,11 @@ function Blog() {
     <BlogContainer>
       <ImageColumn>
         <BlogImageStyled src={BlogImage} alt="Blog" />
-        <FollowButton>Follow Me</FollowButton>
+        <FollowButton href="https://hashnode.com/@Kerubo" target="_blank">
+          Follow Me
+        </FollowButton>
         <BlogLogoStyled src={BlogLogo} alt="Blog logo" />
-        <BlogNavStyled src={BlogNavbar} alt="Blog profile"/>
+        <BlogNavStyled src={BlogNavbar} alt="Blog profile" />
       </ImageColumn>
       <BackgroundContainer>
         <BlogTextColumn>
@@ -168,7 +180,13 @@ function Blog() {
           </BlogText>
         </BlogTextColumn>
         <FollowHashnodeColumn>
-          <FollowHashnodeText>Follow me on Hashnode</FollowHashnodeText>
+          <BlogProfile src={BlogNavbar} alt="My blog profile" />
+          <FollowHashnodeText
+            href="https://hashnode.com/@Kerubo"
+            target="_blank"
+          >
+            Follow me on Hashnode
+          </FollowHashnodeText>
         </FollowHashnodeColumn>
       </BackgroundContainer>
     </BlogContainer>
