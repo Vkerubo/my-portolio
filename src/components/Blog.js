@@ -28,6 +28,20 @@ const BlogImageStyled = styled.img`
   object-fit: cover;
 `;
 
+const FollowButton = styled.div`
+  background: #333;
+  box-shadow: 0px 4px 4px 0px #56a8a1;
+  display: flex;
+  width: 69px;
+  height: 17px;
+  padding: 3px 5px 2px 5px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+`;
+
+
 function Blog() {
   return <>Hi</>;
 }
