@@ -33,6 +33,20 @@ const Container = styled.div`
   }
 `;
 
+const ContainerTwo = styled.div`
+  display: flex;
+  //justify-content: space-between;
+  margin-left: 50px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+`;
+
 const LeftColumn = styled.div`
   width: 30%;
   margin-top: 100px;
@@ -131,6 +145,29 @@ const ArrowIcon = styled.img`
   }
 `;
 
+const ViewMoreLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #58a8a1;
+  font-family: Montserrat;
+  text-decoration: none; /* Remove underline by default */
+  padding: 8px 16px; /* Reduce padding to make it smaller */
+  border: 1px solid #58a8a1; /* Add border to resemble a button */
+  transition: background-color 0.3s, color 0.3s; /* Add smooth transition on hover */
+  font-size: 14px; /* Adjust font size */
+  width: fit-content; /* Make the link width fit its content */
+  margin: 0 auto;
+
+  &:hover {
+    color: white;
+    background-color: #58a8a1;
+    cursor: pointer;
+    text-decoration: none;
+  }
+`;
+
+
 function Projects() {
   return (
     <>
@@ -155,7 +192,7 @@ function Projects() {
           <ChamaImageStyled src={ChamaIMage} alt="Chama" />
         </RightColumn>
       </Container>
-      <Container>
+      <ContainerTwo>
         <LeftColumn>
           <Title>Chama-Ke</Title>
           <Description>
@@ -174,21 +211,11 @@ function Projects() {
         <RightColumn>
           <ChamaImageStyled src={ChamaIMage} alt="Chama" />
         </RightColumn>
-      </Container>
-      <Link
-        to="/projects"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          marginTop: "50px",
-          color: "black",
-          fontFamily: "Montserrat",
-        }}
-      >
+      </ContainerTwo>
+      <ViewMoreLink to="/projects">
         View more projects
         <ArrowIcon src={ArrowImahe} alt="View more projects" />
-      </Link>
+      </ViewMoreLink>
     </>
   );
 }
