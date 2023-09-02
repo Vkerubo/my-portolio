@@ -35,7 +35,17 @@ const Subtitle = styled.div`
   flex-shrink: 0;
 `;
 
-
+const Description = styled.div`
+  color: #333;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 574px;
+  height: 101px;
+  flex-shrink: 0;
+`;
 
 function Mentorship() {
   return <div>Mentorship</div>;
