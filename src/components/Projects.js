@@ -108,8 +108,6 @@ const ChamaImageStyled = styled.img`
   }
 `;
 
-
-
 const RightColumn = styled.div`
   width: 60%;
   display: flex;
@@ -118,7 +116,7 @@ const RightColumn = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    width: 100%
+    width: 100%;
   }
 `;
 
@@ -183,7 +181,7 @@ function Projects() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          marginTop: "20px",
+          marginTop: "50px",
           color: "black",
           fontFamily: "Montserrat",
         }}
