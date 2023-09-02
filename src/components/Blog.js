@@ -16,6 +16,11 @@ const BlogContainer = styled.div`
   box-shadow: 0px 4px 4px 0px #56a8a1;
 `;
 
+const ImageColumn = styled.div`
+  width: 400px;
+  height: 396px;
+  flex-shrink: 0;
+`;
 
 function Blog() {
   return <>Hi</>;
