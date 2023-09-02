@@ -41,6 +41,15 @@ const FollowButton = styled.div`
   cursor: pointer;
 `;
 
+const BlogTextColumn = styled.div`
+  width: 574px;
+  height: 84px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`;
 
 function Blog() {
   return <>Hi</>;
