@@ -1,6 +1,8 @@
 import React from "react";
 import { styled } from "styled-components";
 import ChamaIMage from "../components/assets/chama.png";
+import ArrowImahe from "../components/assets/Arrow 1.svg";
+import { Link } from "react-router-dom";
 
 const ProjectsTitle = styled.div`
   color: #333;
@@ -120,6 +122,17 @@ const RightColumn = styled.div`
   }
 `;
 
+const ArrowIcon = styled.img`
+  max-width: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: #333;
+
+  @media (max-width: 768px) {
+    max-width: 20px;
+  }
+`;
+
 function Projects() {
   return (
     <>
@@ -164,6 +177,20 @@ function Projects() {
           <ChamaImageStyled src={ChamaIMage} alt="Chama" />
         </RightColumn>
       </Container>
+      <Link
+        to="/projects"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "20px",
+          color: "black",
+          fontFamily: "Montserrat",
+        }}
+      >
+        View more projects
+        <ArrowIcon src={ArrowImahe} alt="View more projects" />
+      </Link>
     </>
   );
 }
