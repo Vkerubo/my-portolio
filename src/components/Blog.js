@@ -51,6 +51,17 @@ const BlogTextColumn = styled.div`
   align-items: flex-start;
 `;
 
+const BlogText = styled.div`
+  color: #333;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+`;
+
+
+
 function Blog() {
   return <>Hi</>;
 }
