@@ -5,6 +5,7 @@ import MySkills from "./MySkills";
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import Blog from "./Blog";
+import Mentorship from "./Mentorship";
 
 function Homepage() {
   return (
@@ -15,6 +16,7 @@ function Homepage() {
       <AboutMe />
       <Projects />
       <Blog />
+      <Mentorship />
     </>
   );
 }
