@@ -127,6 +127,11 @@ const OpeningSpeechMarks = styled.div`
   flex-shrink: 0;
 `;
 
+const TestimonialDescription = styled.div`
+  flex-grow: 1; /* Take up the remaining space */
+  padding-left: 10px; /* Add some spacing between speech marks and description */
+`;
+
 function Testimonials() {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedTestimonial, setSelectedTestimonial] = useState("");
