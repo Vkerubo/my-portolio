@@ -138,6 +138,12 @@ const ClosingSpeechMarks = styled.div`
   flex-shrink: 0;
 `;
 
+const TestimonialAuthor = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px; /* Add some spacing between testimonial and author */
+`;
 
 function Testimonials() {
   const [modalVisible, setModalVisible] = useState(false);
