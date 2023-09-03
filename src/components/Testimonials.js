@@ -14,9 +14,10 @@ const TestimonialsContainer = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  width: 610px;
+  width: 100%;
   height: 58px;
   flex-shrink: 0;
+  justify-content: center;
 `;
 
 const Title = styled.div`
@@ -25,7 +26,13 @@ const Title = styled.div`
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
+  width: 100%
+  text-align: center;
   line-height: normal;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 `;
 
 const TestimonialQuoteImage = styled.img`
@@ -35,7 +42,12 @@ const TestimonialQuoteImage = styled.img`
 `;
 
 function Testimonials() {
-  return <>Hi</>;
+  return (
+    <TestimonialsContainer>
+      <Title>What people say about me</Title>
+      <TestimonialQuoteImage src={TestimonialQuote} alt="Testimonial Quote" />
+    </TestimonialsContainer>
+  );
 }
 
 export default Testimonials;
