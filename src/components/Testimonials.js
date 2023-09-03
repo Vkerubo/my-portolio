@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled, keyframes } from "styled-components";
 import TestimonialQuote from "../components/assets/Vector (1).svg";
 import TestimonialImage from "../components/assets/Men talking.gif";
+import TestimonialModal from "./TestimonialModal";
+//import { useState } from "react";
 
 const TestimonialsContainer = styled.div`
   display: flex;
@@ -11,17 +13,26 @@ const TestimonialsContainer = styled.div`
   font-family: Montserrat;
   width: 100%;
   justify-content: center;
-  background-color: #58a8a1;
   padding: 20px 0;
 `;
 
+const HeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+`;
+
 const Title = styled.div`
-  color: #fff;
+  color: #333;
+  font-family: Montserrat;
   font-size: 40px;
+  font-style: normal;
   font-weight: 700;
+  width: 100%
   text-align: center;
   line-height: normal;
-  margin-bottom: 20px;
 
   @media (max-width: 768px) {
     font-size: 30px;
@@ -32,7 +43,7 @@ const TestimonialQuoteImage = styled.img`
   width: 24px;
   height: 24px;
   flex-shrink: 0;
-  margin-top: 20px;
+  margin-left: 10px;
 `;
 
 const TestimonialsContent = styled.div`
@@ -41,24 +52,45 @@ const TestimonialsContent = styled.div`
   align-items: flex-start;
   width: 100%;
   margin-top: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    //margin-left: 90px;
+  }
 `;
 
 const TestimonialImageContainer = styled.div`
   flex-shrink: 0;
-  margin-right: 20px;
+  //margin-right: 10px;
+  display: block;
+  max-width: 40%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const TestimonialImageStatic = styled.img`
-  max-width: 200px; /* Adjust the image size as needed */
+  max-width: 100%;
   height: auto;
+  width: 100%;
+
+  @media (min-width: 769px) {
+    max-width: 100%; /* On larger screens, set the width to 50% */
+  }
 `;
 
 const TestimonialsSlider = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  width: 70%;
   overflow: hidden;
+
+  @media (min-width: 769px) {
+    width: 100%; /* On larger screens, set the width to 50% */
+    margin-left: 0px;
+  }
 `;
 
 const slideUp = keyframes`
@@ -72,17 +104,49 @@ const slideUp = keyframes`
 
 const Testimonial = styled.div`
   background-color: #fff;
+  cursor: pointer;
   width: 100%;
   padding: 20px;
+  background: rgba(161, 228, 211, 0.14);
   margin-top: 20px;
   animation: ${slideUp} 5s linear infinite;
 `;
 
+const TestimonialContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+`;
+
 function Testimonials() {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedTestimonial, setSelectedTestimonial] = useState("");
+
+  const testimonials = [
+    "Testimonial 1 content goes here.",
+    "Testimonial 2 content goes here.",
+    "Testimonial 3 content goes here.",
+    "Testimonial 4 content goes here.",
+  ];
+
+  const handleTestimonialClick = (testimonial) => {
+    setSelectedTestimonial(testimonial);
+    setModalVisible(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
   return (
     <TestimonialsContainer>
-      <Title>What people say about me</Title>
-      <TestimonialQuoteImage src={TestimonialQuote} alt="Testimonial Quote" />
+      <HeaderContainer>
+        <Title>What people say about me</Title>
+        <TestimonialQuoteImage src={TestimonialQuote} alt="Testimonial Quote" />
+      </HeaderContainer>
       <TestimonialsContent>
         <TestimonialImageContainer>
           <TestimonialImageStatic
@@ -91,27 +155,22 @@ function Testimonials() {
           />
         </TestimonialImageContainer>
         <TestimonialsSlider>
-          {/* Testimonial 1 */}
-          <Testimonial>
-            <p>Testimonial 1 content goes here.</p>
-          </Testimonial>
-
-          {/* Testimonial 2 */}
-          <Testimonial>
-            <p>Testimonial 2 content goes here.</p>
-          </Testimonial>
-
-          {/* Testimonial 3 */}
-          <Testimonial>
-            <p>Testimonial 3 content goes here.</p>
-          </Testimonial>
-
-          {/* Testimonial 4 */}
-          <Testimonial>
-            <p>Testimonial 4 content goes here.</p>
-          </Testimonial>
+          {testimonials.map((testimonial, index) => (
+            <Testimonial
+              key={index}
+              onClick={() => handleTestimonialClick(testimonial)}
+            >
+              <p>{testimonial}</p>
+            </Testimonial>
+          ))}
         </TestimonialsSlider>
       </TestimonialsContent>
+      {modalVisible && (
+        <TestimonialModal
+          testimonial={selectedTestimonial}
+          onClose={handleCloseModal}
+        />
+      )}
     </TestimonialsContainer>
   );
 }
