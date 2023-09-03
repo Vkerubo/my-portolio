@@ -28,6 +28,12 @@ const Title = styled.div`
   line-height: normal;
 `;
 
+const TestimonialQuoteImage = styled.img`
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+`;
+
 function Testimonials() {
   return <>Hi</>;
 }
