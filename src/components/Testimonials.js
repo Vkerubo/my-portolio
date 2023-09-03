@@ -145,6 +145,11 @@ const TestimonialAuthor = styled.div`
   margin-top: 10px; /* Add some spacing between testimonial and author */
 `;
 
+const AuthorName = styled.div`
+  font-weight: bold;
+`;
+
+
 function Testimonials() {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedTestimonial, setSelectedTestimonial] = useState("");
