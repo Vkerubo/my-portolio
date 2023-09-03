@@ -149,6 +149,10 @@ const AuthorName = styled.div`
   font-weight: bold;
 `;
 
+const AuthorTitle = styled.div`
+  font-size: 14px;
+  margin-top: 5px;
+`;
 
 function Testimonials() {
   const [modalVisible, setModalVisible] = useState(false);
