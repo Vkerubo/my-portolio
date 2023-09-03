@@ -11,13 +11,14 @@ const BlogContainer = styled.div`
   flex-shrink: 0;
   margin-left: 100px;
   margin-top: 50px;
-  //margin: 0 auto;
+  //max-width: 1200px;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     gap: 10px;
     margin-left: 30px;
+
   }
 `;
 
@@ -126,7 +127,7 @@ const BackgroundContainer = styled.div`
     align-items: start;
     //gap: 10px;
     margin-top: 10px;
-    max-width: 100%;
+    //max-width: 768px;
     height: 150px;
     margin-left: 0px;
   }

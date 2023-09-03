@@ -10,13 +10,19 @@ const MentorshipContainer = styled.div`
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
-  
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-left: 30px;
+  }
 `;
 
 const LeftColumn = styled.div`
   flex-basis: 50%;
   padding: 20px;
-  text-align: center;
+  text-align: start;
 `;
 
 const RightColumn = styled.div`
@@ -32,6 +38,7 @@ const Title = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-bottom: 20px;
 `;
 
 const Subtitle = styled.div`
@@ -39,8 +46,9 @@ const Subtitle = styled.div`
   font-family: Montserrat;
   font-size: 24px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100;
   line-height: normal;
+  margin-bottom: 10px;
 `;
 
 const Description = styled.div`
@@ -49,7 +57,7 @@ const Description = styled.div`
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: 30px;
 `;
 
 const ContactLink = styled.a`
@@ -66,7 +74,8 @@ const ContactLink = styled.a`
   transition: background-color 0.3s, color 0.3s;
 
   &:hover {
-    background-color: transparent;
+    background-color: #56a8a1;
+    color: white;
   }
 `;
 
@@ -77,6 +86,11 @@ const ConnectTitle = styled.div`
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  margin-top: 100px;
+
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  }
 `;
 
 const SocialIconsContainer = styled.div`
