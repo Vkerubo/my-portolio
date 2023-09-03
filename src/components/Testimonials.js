@@ -154,6 +154,14 @@ const AuthorTitle = styled.div`
   margin-top: 5px;
 `;
 
+const AuthorImageContainer = styled.div`
+  width: 73px;
+  height: 66px;
+  flex-shrink: 0;
+  margin-left: 10px; /* Add spacing between author and image container */
+  background-color: #ccc; /* Add background color for the image container */
+`;
+
 function Testimonials() {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedTestimonial, setSelectedTestimonial] = useState("");
