@@ -6,30 +6,36 @@ import BlogNavbar from "../components/assets/HahnodeNavbar.png";
 
 const BlogContainer = styled.div`
   display: flex;
-  gap: 50px;
+  //gap: 0px;
+  //align-items: center;
   flex-shrink: 0;
-  margin-left: 140px;
+  margin-left: 100px;
   margin-top: 50px;
+  //margin: 0 auto;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     gap: 10px;
     margin-left: 30px;
   }
 `;
 
 const ImageColumn = styled.div`
-  width: 400px;
+  max-width: 100%;
   height: 396px;
   flex-shrink: 0;
   position: relative;
+
+  @media (max-width: 768px) {
+    max-width: 100%
+  }
 `;
 
 const BlogImageStyled = styled.img`
-  width: 100%;
+  max-width: 100%;
   height: 100%;
-  object-fit: cover;
+  //object-fit: cover;
 `;
 
 const FollowButton = styled.a`
@@ -82,7 +88,6 @@ const FollowButton = styled.a`
   }
 `;
 
-
 const BlogLogoStyled = styled.img`
   position: absolute; /* Position the button absolutely within the image container */
   top: 113px; /* Position from the top */
@@ -109,20 +114,20 @@ const BlogProfile = styled.img`
 const BackgroundContainer = styled.div`
   background: rgba(161, 228, 211, 0.14);
   display: flex;
-  gap: 50px;
+  //gap: 50px;
   height: 180px;
   flex-shrink: 0;
-  margin-left: 14px;
+  //margin-left: 14px;
   margin-top: 90px;
   max-width: 100%;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: start;
-    gap: 10px;
+    //gap: 10px;
     margin-top: 10px;
     max-width: 100%;
-    height: 170px;
+    height: 150px;
     margin-left: 0px;
   }
 `;
@@ -136,7 +141,7 @@ const BlogTextColumn = styled.div`
   justify-content: center;
   align-items: flex-start;
   max-width: 100%;
-  margin-left: 45px;
+  //margin-left: 45px;
   margin-top: 40px;
 
   @media (max-width: 768px) {
@@ -150,9 +155,10 @@ const BlogText = styled.div`
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  //font-weight: 400;
   line-height: normal;
-  //margin-top: 300px;
+  max-width: 100%;
+  margin-left: 20px;
 
   @media (max-width: 768px) {
     margin-top: 1px;
@@ -172,7 +178,7 @@ const FollowHashnodeColumn = styled.div`
 
   @media (max-width: 768px) {
     margin-top: 0px;
-    margin-left: 90px;
+    margin-left: 120px;
     //justify-content: center;
   }
 `;
@@ -181,14 +187,14 @@ const FollowHashnodeText = styled.a`
   color: #56a8a1;
   font-family: Montserrat;
   font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
+  //font-style: bold;
+  font-weight: 900;
   line-height: normal;
   text-decoration: underline;
   margin-top: 10px;
 
   @media (max-width: 768px) {
-    margin-top: 1px;
+    margin-top: 10px;
   }
 
   &:hover,
@@ -227,7 +233,7 @@ function Blog() {
             href="https://hashnode.com/@Kerubo"
             target="_blank"
           >
-            Follow me on Hashnode
+            Check My Blog
           </FollowHashnodeText>
         </FollowHashnodeColumn>
       </BackgroundContainer>
