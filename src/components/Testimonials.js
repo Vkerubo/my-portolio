@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import OpeningSpeechMarks from "../components/assets/Quote Left.png";
 import ClosingSpeechMarks from "../components/assets/Get Quote.png";
 import TestimonialQuote from "../components/assets/Vector (1).svg";
+import TestimonialImage from "../components/assets/Men talking.gif";
 
 const TestimonialsContainer = styled.div`
   display: flex;

@@ -30,6 +30,7 @@ const ImageColumn = styled.div`
 
   @media (max-width: 768px) {
     max-width: 100%
+    //display: none;
   }
 `;
 
