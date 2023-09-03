@@ -11,7 +11,7 @@ const BlogContainer = styled.div`
   flex-shrink: 0;
   margin-left: 100px;
   margin-top: 50px;
-  //max-width: 1200px;
+  max-width: 100%;
 
   @media (max-width: 768px) {
     flex-direction: column;

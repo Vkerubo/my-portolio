@@ -7,7 +7,8 @@ const AboutMeContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: start;
-  margin-left: 70px;
+  //justify-content: center;
+  margin-left: 50px;
   gap: 10px;
   padding: 40px;
   background-color: #fff;
@@ -15,6 +16,7 @@ const AboutMeContainer = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: start;
+    //justify-content: center;
     margin-left: 20px;
   }
 `;
