@@ -121,6 +121,12 @@ const TestimonialContainer = styled.div`
   position: relative;
 `;
 
+const OpeningSpeechMarks = styled.div`
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+`;
+
 function Testimonials() {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedTestimonial, setSelectedTestimonial] = useState("");
