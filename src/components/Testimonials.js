@@ -19,6 +19,15 @@ const TestimonialsContainer = styled.div`
   flex-shrink: 0;
 `;
 
+const Title = styled.div`
+  color: #333;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+`;
+
 function Testimonials() {
   return <>Hi</>;
 }
