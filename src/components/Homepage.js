@@ -6,6 +6,7 @@ import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import Blog from "./Blog";
 import Mentorship from "./Mentorship";
+import Testimonials from "./Testimonials";
 
 function Homepage() {
   return (
@@ -17,6 +18,7 @@ function Homepage() {
       <Projects />
       <Blog />
       <Mentorship />
+      <Testimonials />
     </>
   );
 }
