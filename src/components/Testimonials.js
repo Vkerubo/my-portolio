@@ -209,7 +209,7 @@ function Testimonials() {
     }, 9000); // Change testimonials every 9 seconds
 
     return () => clearInterval(timer);
-  }, [testimonialIndex]);
+  }, [testimonialIndex, testimonials.length]);
 
   return (
     <TestimonialsContainer>
