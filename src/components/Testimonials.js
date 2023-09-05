@@ -1,19 +1,32 @@
-import React, { useState } from "react";
-import { styled, keyframes } from "styled-components";
+import React, { useState, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
 import TestimonialQuote from "../components/assets/Vector (1).svg";
-import TestimonialImage from "../components/assets/Men talking.gif";
-import TestimonialModal from "./TestimonialModal";
-//import { useState } from "react";
+import NelsonImage from "../components/assets/NelsonImage.jpeg";
+import UreyImage from "../components/assets/Urey.webp";
+import WizaImage from "../components/assets/Wiza.jpeg";
+
+const fadeAnimation = keyframes`
+  0%, 100% {
+    opacity: 0;
+  }
+  25%, 75% {
+    opacity: 1;
+  }
+`;
 
 const TestimonialsContainer = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   color: #333;
   font-family: Montserrat;
   width: 100%;
   justify-content: center;
   padding: 20px 0;
+
+  @media (max-width: 768px) {
+    padding: 0; /* Remove padding on smaller screens */
+  }
 `;
 
 const HeaderContainer = styled.div`
@@ -30,7 +43,7 @@ const Title = styled.div`
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  width: 100%
+  width: 100%;
   text-align: center;
   line-height: normal;
 
@@ -46,141 +59,157 @@ const TestimonialQuoteImage = styled.img`
   margin-left: 10px;
 `;
 
-const TestimonialsContent = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
-  margin-top: 20px;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    //margin-left: 90px;
-  }
-`;
-
-const TestimonialImageContainer = styled.div`
-  flex-shrink: 0;
-  //margin-right: 10px;
-  display: block;
-  max-width: 40%;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const TestimonialImageStatic = styled.img`
-  max-width: 100%;
-  height: auto;
-  width: 100%;
-
-  @media (min-width: 769px) {
-    max-width: 100%; /* On larger screens, set the width to 50% */
-  }
-`;
-
-const TestimonialsSlider = styled.div`
+const TestimonialTextContainer = styled.div`
+  flex: 2;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 70%;
-  overflow: hidden;
 
-  @media (min-width: 769px) {
-    width: 100%; /* On larger screens, set the width to 50% */
-    margin-left: 0px;
+  @media (max-width: 768px) {
+    margin-left: 50px;
+    margin-right: 50px;
   }
 `;
 
-const slideUp = keyframes`
-  0% {
-    transform: translateY(0);
+const TestimonialDescription = styled.p`
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  @media (max-width: 768px) {
+    margin-left: 10px;
+    margin-right: 10px;
   }
-  100% {
-    transform: translateY(-100%);
-  }
 `;
 
-const Testimonial = styled.div`
-  background-color: #fff;
-  cursor: pointer;
-  width: 100%;
-  padding: 20px;
-  background: rgba(161, 228, 211, 0.14);
-  margin-top: 20px;
-  animation: ${slideUp} 5s linear infinite;
-`;
-
-const TestimonialContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
-  margin-top: 20px;
-  position: relative;
-`;
-
-const OpeningSpeechMarks = styled.div`
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-`;
-
-const TestimonialDescription = styled.div`
-  flex-grow: 1; /* Take up the remaining space */
-  padding-left: 10px; /* Add some spacing between speech marks and description */
-`;
-
-const ClosingSpeechMarks = styled.div`
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-`;
-
-const TestimonialAuthor = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 10px; /* Add some spacing between testimonial and author */
-`;
-
-const AuthorName = styled.div`
+const AuthorName = styled.p`
+  font-size: 20px;
   font-weight: bold;
+  margin-top: 10px;
 `;
 
-const AuthorTitle = styled.div`
+const AuthorTitle = styled.p`
   font-size: 14px;
-  margin-top: 5px;
+  color: #888;
+  margin-top: 1px;
 `;
 
-const AuthorImageContainer = styled.div`
-  width: 73px;
-  height: 66px;
-  flex-shrink: 0;
-  margin-left: 10px; /* Add spacing between author and image container */
-  background-color: #ccc; /* Add background color for the image container */
+const AuthorContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+const NelsonImageContainer = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const NelsonImageBig = styled.img`
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+  margin-top: 0px;
+  border-radius: 53px;
+`;
+
+const NumberCirclesContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+`;
+
+const NumberCircle = styled.div`
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 10px;
+`;
+
+const TestimonialContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-left: 190px;
+  margin-right: 190px;
+  box-shadow: inset 0 0 0 1px #ccc; /* Add an inner border */
+  //animation: ${fadeAnimation} 8s linear infinite; /* Apply fading animation */
+
+  @media (max-width: 768px) {
+    padding: 0; /* Remove padding on smaller screens */
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+  }
+`;
+
+const TestimonialContentContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
 `;
 
 function Testimonials() {
-  const [modalVisible, setModalVisible] = useState(false);
-  const [selectedTestimonial, setSelectedTestimonial] = useState("");
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
 
   const testimonials = [
-    "Testimonial 1 content goes here.",
-    "Testimonial 2 content goes here.",
-    "Testimonial 3 content goes here.",
-    "Testimonial 4 content goes here.",
+    {
+      text: ` "Valentine Oberi is an outstanding individual whose leadership
+      skills and unwavering determination in the field of software
+      engineering truly stand out. As a class representative, she
+      skillfully organized and fostered collaboration, leaving a positive
+      impact in the entire class. Valentine's genuine passion for software
+      engineering manifested in her relentless pursuit of innovative
+      solutions for intricate challenges. Her resilience and dedication
+      serve as a true inspiration, assuring me that she will undoubtedly
+      continue to thrive and make significant contributions to the
+      industry."`,
+      authorName: "Nelson Muriithi",
+      authorTitle: "Technical Mentor, Moringa School",
+      authorImage: NelsonImage,
+    },
+    {
+      text: `"I've had the privilege of mentoring Valentine during her learning journey in the world of tech and programming. Her genuine passion for this field is inspiring, and I've witnessed her dedication and hard work firsthand. Valentine has truly fallen in love with technology, and it's been a joy to guide her as she grows in her skills and knowledge. She's a dedicated learner with a bright future ahead."`,
+      authorName: "Urey Mutuale",
+      authorTitle: "Managing Director OctoBytes/Malewa",
+      authorImage: UreyImage,
+    },
+    {
+      text: `"I've had the privilege of mentoring Valentine during her learning journey in the world of tech and programming. Her genuine passion for this field is inspiring, and I've witnessed her dedication and hard work firsthand. Valentine has truly fallen in love with technology, and it's been a joy to guide her as she grows in her skills and knowledge. She's a dedicated learner with a bright future ahead."`,
+      authorName: "Wiza Jalakasi",
+      authorTitle: "Director, Africa Market Development, EBANX",
+      authorImage: WizaImage,
+    },
+    // Add more testimonials
   ];
 
-  const handleTestimonialClick = (testimonial) => {
-    setSelectedTestimonial(testimonial);
-    setModalVisible(true);
-  };
+  useEffect(() => {
+    // Cycle through testimonials with a delay
+    const timer = setInterval(() => {
+      setTestimonialIndex((prevIndex) =>
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 9000); // Change testimonials every 9 seconds
 
-  const handleCloseModal = () => {
-    setModalVisible(false);
-  };
+    return () => clearInterval(timer);
+  }, [testimonialIndex]);
 
   return (
     <TestimonialsContainer>
@@ -188,30 +217,39 @@ function Testimonials() {
         <Title>What people say about me</Title>
         <TestimonialQuoteImage src={TestimonialQuote} alt="Testimonial Quote" />
       </HeaderContainer>
-      <TestimonialsContent>
-        <TestimonialImageContainer>
-          <TestimonialImageStatic
-            src={TestimonialImage}
-            alt="Static Testimonial Image"
-          />
-        </TestimonialImageContainer>
-        <TestimonialsSlider>
-          {testimonials.map((testimonial, index) => (
-            <Testimonial
-              key={index}
-              onClick={() => handleTestimonialClick(testimonial)}
-            >
-              <p>{testimonial}</p>
-            </Testimonial>
-          ))}
-        </TestimonialsSlider>
-      </TestimonialsContent>
-      {modalVisible && (
-        <TestimonialModal
-          testimonial={selectedTestimonial}
-          onClose={handleCloseModal}
-        />
-      )}
+      <TestimonialContentWrapper>
+        <TestimonialTextContainer>
+          <TestimonialDescription>
+            {testimonials[testimonialIndex].text}
+          </TestimonialDescription>
+        </TestimonialTextContainer>
+        <TestimonialContentContainer>
+          <AuthorContainer>
+            <AuthorName>{testimonials[testimonialIndex].authorName}</AuthorName>
+            <AuthorTitle>
+              {testimonials[testimonialIndex].authorTitle}
+            </AuthorTitle>
+          </AuthorContainer>
+          <NelsonImageContainer>
+            <NelsonImageBig
+              src={testimonials[testimonialIndex].authorImage}
+              alt="Author Image"
+            />
+          </NelsonImageContainer>
+        </TestimonialContentContainer>
+      </TestimonialContentWrapper>
+      <NumberCirclesContainer>
+        {testimonials.map((_, index) => (
+          <NumberCircle
+            key={index}
+            style={{
+              background: index === testimonialIndex ? "#333" : "white",
+            }}
+          >
+            {index + 1}
+          </NumberCircle>
+        ))}
+      </NumberCirclesContainer>
     </TestimonialsContainer>
   );
 }
