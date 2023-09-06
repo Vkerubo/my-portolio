@@ -244,6 +244,8 @@ function Testimonials() {
             key={index}
             style={{
               background: index === testimonialIndex ? "#56a8a1" : "#8891b0",
+              width: index === testimonialIndex ? "30px" : "20px", // Adjust the width
+              height: index === testimonialIndex ? "30px" : "20px", // Adjust the height
             }}
           >
             {index + 1}
