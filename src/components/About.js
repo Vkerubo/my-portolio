@@ -1,8 +1,12 @@
 import React from "react";
-import { styled } from "styled-components";
+import Navbar from "./Navbar";
 
 function About() {
-  return <>Hi</>;
+  return (
+  <>
+    <Navbar />
+  </>
+  );
 }
 
 export default About;
