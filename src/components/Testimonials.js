@@ -243,7 +243,7 @@ function Testimonials() {
           <NumberCircle
             key={index}
             style={{
-              background: index === testimonialIndex ? "#333" : "white",
+              background: index === testimonialIndex ? "#56a8a1" : "#8891b0",
             }}
           >
             {index + 1}

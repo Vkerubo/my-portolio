@@ -35,7 +35,7 @@ const HiText = styled.div`
   color: #a1e4d3;
 
   @media (max-width: 768px) {
-    font-size: 1opx;
+    font-size: 10px;
   }
 `;
 
