@@ -8,6 +8,7 @@ import Blog from "./Blog";
 import Mentorship from "./Mentorship";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 function Homepage() {
   return (
@@ -21,6 +22,7 @@ function Homepage() {
       <Mentorship />
       <Testimonials />
       <Contact />
+      <Footer />
     </>
   );
 }
