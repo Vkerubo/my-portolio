@@ -9,6 +9,7 @@ const NavbarContainer = styled.div`
   align-items: center;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
 `;
 
 const Header = styled.h1`
