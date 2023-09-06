@@ -73,7 +73,7 @@ const Column4 = styled.div`
   margin-bottom: 20px;
 
   @media (max-width: 768px) {
-    height: 135px;
+    height: 185px;
   }
 `;
 
