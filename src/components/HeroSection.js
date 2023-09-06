@@ -33,6 +33,10 @@ const HeroColumn = styled.div`
 const HiText = styled.div`
   font-size: 16px;
   color: #a1e4d3;
+
+  @media (max-width: 768px) {
+    font-size: 1opx;
+  }
 `;
 
 const NameText = styled.div`
@@ -124,7 +128,6 @@ const DescriptionText = styled.div`
 const HeroImageContainer = styled.div`
   //flex-shrink: 0;
   margin-left: 2px;
-
 `;
 
 const HeroImageStyled = styled.img`

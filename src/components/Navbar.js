@@ -13,7 +13,7 @@ const NavbarContainer = styled.div`
 `;
 
 const Header = styled.h1`
-  color: #fff;
+  color: #8891b0;
   font-size: 16px;
   font-weight: regular;
   margin: 0;
