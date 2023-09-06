@@ -192,7 +192,7 @@ function Testimonials() {
       authorImage: UreyImage,
     },
     {
-      text: `"I've had the privilege of mentoring Valentine during her learning journey in the world of tech and programming. Her genuine passion for this field is inspiring, and I've witnessed her dedication and hard work firsthand. Valentine has truly fallen in love with technology, and it's been a joy to guide her as she grows in her skills and knowledge. She's a dedicated learner with a bright future ahead."`,
+      text: `"Valentine's unwavering dedication to tech and programming is truly inspiring. Her insatiable curiosity and relentless pursuit of knowledge are evident in everything she does. With her incredible work ethic and boundless passion, a future filled with success and innovation awaits her in the world of technology." `,
       authorName: "Wiza Jalakasi",
       authorTitle: "Director, Africa Market Development, EBANX",
       authorImage: WizaImage,
