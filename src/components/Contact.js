@@ -8,12 +8,14 @@ const Container = styled.div`
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: center;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-left: 60px;
+    padding: 30px;
+    max-width: 100%;
   }
 `;
 
