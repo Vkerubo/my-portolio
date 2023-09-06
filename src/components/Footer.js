@@ -6,7 +6,11 @@ import styled from "styled-components";
 const FooterContainer = styled.div`
   background: #0a1930;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 70px;
+
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
 `;
 
 // Define a styled component for the img element
