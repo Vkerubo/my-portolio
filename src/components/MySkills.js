@@ -60,7 +60,7 @@ const Column3 = styled.div`
   margin-bottom: 20px;
 
   @media (max-width: 768px) {
-    height: 210px;
+    height: 250px;
   }
 `;
 
