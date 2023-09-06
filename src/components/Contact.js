@@ -10,7 +10,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-left: 90px;
+    margin-left: 60px;
   }
 `;
 
