@@ -8,7 +8,7 @@ const NavbarContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 4px 0px rgba(0, 0, 0, 0.25);
   max-width: 100%;
 `;
 
@@ -34,7 +34,7 @@ const NavLinks = styled.ul`
   font-family: sen;
 
   @media (max-width: 768px) {
-    gap: 18px;
+    gap: 10px;
     margin-top: 25px;
   }
 `;
