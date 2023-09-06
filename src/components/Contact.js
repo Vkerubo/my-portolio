@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import GithubIcon from "../components/assets/GitHub.png";
+import XIcon from "../components/assets/TwitterX (1).png";
+import LinkedIn from "../components/assets/LinkedIn Circled.png";
 
 const Container = styled.div`
   display: flex;
@@ -128,6 +131,27 @@ const Required = styled.span`
   font-weight: bold;
   margin-left: 5px;
 `;
+
+const SocialIconsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+const SocialIcon = styled.a`
+  width: 30px;
+  height: 29px;
+  margin: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    opacity: 0.7;
+  }
+`;
+
 
 
 function Contact() {
