@@ -7,6 +7,10 @@ const FooterContainer = styled.div`
   background: #0a1930;
   padding: 20px;
   margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
 
   @media (max-width: 768px) {
     margin-top: 10px;
@@ -18,16 +22,26 @@ const CopyrightImage = styled.img`
   width: 50px;
   height: 35px;
   flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    width: 35px;
+    height: 25px;
+  }
 `;
 
 // Define a styled component for the span element
 const CopyrightText = styled.span`
   color: #fff;
   font-family: Sen;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-align: center; /* Center text horizontally */
+
+  @media (max-width: 768px) {
+    font-size: 10px; /* Adjust font size for smaller screens */
+  }
 `;
 
 function Footer() {
