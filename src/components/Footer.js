@@ -19,13 +19,13 @@ const FooterContainer = styled.div`
 
 // Define a styled component for the img element
 const CopyrightImage = styled.img`
-  width: 50px;
-  height: 35px;
+  width: 30px;
+  height: 20px;
   flex-shrink: 0;
 
   @media (max-width: 768px) {
-    width: 35px;
-    height: 25px;
+    width: 25px;
+    height: 15px;
   }
 `;
 
