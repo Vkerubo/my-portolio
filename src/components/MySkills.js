@@ -100,6 +100,8 @@ const SkillList = styled.ul`
   /* Decrease font size and skill list item size for smaller screens */
   @media (max-width: 768px) {
     font-size: 1px;
+    justify-content: start;
+    gap: 10px;
   }
 `;
 
@@ -113,6 +115,7 @@ const SkillListItem = styled.li`
   /* Decrease skill list item size for smaller screens */
   @media (max-width: 768px) {
     font-size: 10px;
+    align-items: flex-start !important;
   }
 `;
 
@@ -214,7 +217,10 @@ function MySkills() {
               Figma
             </SkillListItem>
             <SkillListItem>
-              <SkillIcon src={ResponsiveWebsitesIcon} alt="Responsive websites" />
+              <SkillIcon
+                src={ResponsiveWebsitesIcon}
+                alt="Responsive websites"
+              />
               ResponsiveWebsites
             </SkillListItem>
             <SkillListItem>
@@ -296,11 +302,11 @@ function MySkills() {
             <FrontendTitle>Content Writing</FrontendTitle>
             <DescriptionColumn>
               <SkillDescription>
-                - I have a strong understanding of the content writing process and
-                I can write any content from scratch. My experience encompasses
-                the realm of crafting articles, blogs, and essays. Currently, I
-                actively maintain a blog on Hashnode, where I share my insights
-                and expertise.{" "}
+                - I have a strong understanding of the content writing process
+                and I can write any content from scratch. My experience
+                encompasses the realm of crafting articles, blogs, and essays.
+                Currently, I actively maintain a blog on Hashnode, where I share
+                my insights and expertise.{" "}
                 <ExploreLink
                   href="https://hashnode.com/@Kerubo"
                   target="_blank"
