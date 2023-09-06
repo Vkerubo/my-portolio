@@ -81,6 +81,11 @@ const ResumeButton = styled.a`
     transform: perspective(400px) rotateX(10deg); /* Add hover 3D effect */
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.9); /* Add box-shadow for depth */
   }
+
+  @media (max-width: 768px) {
+    font-size: 10px;
+    padding: 10px 7px;
+  }
 `;
 
 const OpenCVLabel = styled.span`
