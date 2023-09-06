@@ -152,8 +152,6 @@ const SocialIcon = styled.a`
   }
 `;
 
-
-
 function Contact() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -249,6 +247,29 @@ function Contact() {
         <Description>
           Feeling social? Find me on these online spaces too!
         </Description>
+        <SocialIconsContainer>
+          <SocialIcon
+            href="https://twitter.com/Kerubo_____"
+            target="_blank"
+            title="Twitter"
+          >
+            <img src={XIcon} alt="Twitter" />
+          </SocialIcon>
+          <SocialIcon
+            href="https://www.linkedin.com/in/valentinekerubo/"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <img src={LinkedIn} alt="LinkedIn" />
+          </SocialIcon>
+          <SocialIcon
+            href="https://github.com/Vkerubo"
+            target="_blank"
+            title="Github"
+          >
+            <img src={GithubIcon} alt="Github" />
+          </SocialIcon>
+        </SocialIconsContainer>
       </RightColumn>
     </Container>
   );
