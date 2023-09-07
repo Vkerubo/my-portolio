@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { styled } from "styled-components";
+import ReactSound from "react-sound";
 
 const BlogTitle = styled.h1`
   color: #333;
