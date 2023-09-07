@@ -1,9 +1,14 @@
 import React from "react";
-import { styled } from "styled-components";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function BlogPage() {
-  return;
-  <>Hi</>;
+  return (
+    <>
+      <Navbar />
+      <Footer />
+    </>
+  );
 }
 
 export default BlogPage;
