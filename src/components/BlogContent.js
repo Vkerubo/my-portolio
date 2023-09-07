@@ -1,7 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { styled } from "styled-components";
-import { useState } from "react";
-import { useEffect } from "react";
 
 const BlogTitle = styled.h1`
   color: #333;
@@ -22,7 +20,6 @@ const TaglineContainer = styled.div`
   overflow: hidden;
 `;
 
-
 const Tagline = styled.p`
   color: #666;
   font-family: Montserrat;
@@ -30,43 +27,42 @@ const Tagline = styled.p`
   font-style: italic;
   overflow: hidden;
 
-
   @media (max-width: 768px) {
     margin-bottom: 0px;
     font-size: 16px;
   }
 `;
 
-function TypingTagline({text}) {
-    const [displayText, setDisplayText] = useState("");
-    const [textIndex, setTextIndex] = useState(0);
+function TypingTagline({ text }) {
+  const [displayText, setDisplayText] = useState("");
+  const [textIndex, setTextIndex] = useState(0);
 
-    useEffect(() => {
-        const typingTimer = setTimeout(() => {
-            if (textIndex < text.length) {
-                setDisplayText(text.substring(0, textIndex + 1));
-                setTextIndex(textIndex + 1);
-            }
-        }, 100) //typing speed, lower value === faster typing speed
+  useEffect(() => {
+    const typingTimer = setTimeout(() => {
+      if (textIndex < text.length) {
+        setDisplayText(text.substring(0, textIndex + 1));
+        setTextIndex(textIndex + 1);
+      }
+    }, 100); // Typing speed, lower value === faster typing speed
 
-        return () => clearTimeout(typingTimer);
-    }, [text, textIndex]);
+    return () => clearTimeout(typingTimer);
+  }, [text, textIndex]);
 
-    return (
-        <TaglineContainer>
-            <Tagline>{displayText}</Tagline>
-        </TaglineContainer>
-    )
-
-};
+  return (
+    <TaglineContainer>
+      <Tagline>{displayText}</Tagline>
+    </TaglineContainer>
+  );
+}
 
 function BlogContent() {
+  const taglineText =
+    "Bringing you techy tales and giggles - It's code with a side of humor!";
+
   return (
     <BlogContainer>
       <BlogTitle>The Adventures of a Tech Wizard</BlogTitle>
-      <Tagline>
-        Bringing you techy tales and giggles - It's code with a side of humor!
-      </Tagline>
+      <TypingTagline text={taglineText} /> {/* Pass text as a prop */}
     </BlogContainer>
   );
 }
