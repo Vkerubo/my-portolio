@@ -41,6 +41,23 @@ function TypingTagline({text}) {
     const [displayText, setDisplayText] = useState("");
     const [textIndex, setTextIndex] = useState(0);
 
+    useEffect(() => {
+        const typingTimer = setTimeout(() => {
+            if (textIndex < text.length) {
+                setDisplayText(text.substring(0, textIndex + 1));
+                setTextIndex(textIndex + 1);
+            }
+        }, 100) //typing speed, lower value === faster typing speed
+
+        return () => clearTimeout(typingTimer);
+    }, [text, textIndex]);
+
+    return (
+        <TaglineContainer>
+            <Tagline>{displayText}</Tagline>
+        </TaglineContainer>
+    )
+
 };
 
 function BlogContent() {
