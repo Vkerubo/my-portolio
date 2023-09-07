@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 const BlogTitle = styled.h1`
   color: #333;
   font-family: Montserrat;
-  font-size: 40px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -61,7 +61,9 @@ function BlogContent() {
 
   return (
     <BlogContainer>
-      <BlogTitle>The Adventures of a Tech Wizard</BlogTitle>
+      <BlogTitle>
+        Take a peek at my blog: <i>The Adventures of a Tech Wizard</i>
+      </BlogTitle>
       <TypingTagline text={taglineText} /> {/* Pass text as a prop */}
     </BlogContainer>
   );
