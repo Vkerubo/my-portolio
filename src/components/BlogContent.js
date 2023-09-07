@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+import { useState } from "react";
 
 const BlogTitle = styled.h1`
   color: #333;
@@ -16,7 +17,6 @@ const BlogContainer = styled.div`
   padding: 40px;
 `;
 
-
 const TaglineContainer = styled.div`
   overflow: hidden;
 `;
@@ -27,12 +27,19 @@ const Tagline = styled.p`
   font-family: Montserrat;
   font-size: 20px;
   font-style: italic;
+  overflow: hidden;
+
 
   @media (max-width: 768px) {
     margin-bottom: 0px;
     font-size: 16px;
   }
 `;
+
+function TypingTagline({text}) {
+    const [displayText, setDisplayText] = useState("");
+    const [textIndex, setTextIndex] = useState(0);
+};
 
 function BlogContent() {
   return (
