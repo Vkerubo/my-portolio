@@ -26,7 +26,7 @@ const Title = styled.div`
   line-height: normal;
 
   @media (max-width: 768px) {
-    font-size: 40px;
+    font-size: 30px;
   }
 `;
 
