@@ -38,16 +38,26 @@ function TypingTagline({ text }) {
   const [displayText, setDisplayText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
 
+  const [typingSoundEnabled, setTypingSoundEnabled] = useState(false); // state to control sound
+
   useEffect(() => {
     const typingTimer = setTimeout(() => {
       if (textIndex < text.length) {
         setDisplayText(text.substring(0, textIndex + 1));
         setTextIndex(textIndex + 1);
+
+        //Enable typing sound when a character is typed
+        setTypingSoundEnabled(true);
       }
     }, 100); // Typing speed, lower value === faster typing speed
 
     return () => clearTimeout(typingTimer);
   }, [text, textIndex]);
+
+  // Function to handle the end of sound playing
+  const handleSoundFinishedPlaying = () => {
+    setTypingSoundEnabled(false); // Disable typing sound when the sound finishes playing
+  };
 
   return (
     <TaglineContainer>
