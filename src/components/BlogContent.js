@@ -11,6 +11,11 @@ const BlogTitle = styled.h1`
   line-height: normal;
 `;
 
+const BlogContainer = styled.div`
+  text-align: center;
+  padding: 40px;
+`;
+
 function BlogContent() {
   return <>Hi</>;
 }

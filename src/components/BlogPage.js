@@ -3,6 +3,8 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Blog from "./Blog";
 import { styled } from "styled-components";
+import BlogContent from "./BlogContent";
+
 
 const MainContainer = styled.div`
   display: flex;
@@ -19,6 +21,7 @@ function BlogPage() {
     <MainContainer>
       <Navbar />
       <Content>
+        <BlogContent />
         <Blog />
       </Content>
       <Footer />
