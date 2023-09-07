@@ -14,6 +14,11 @@ const MainContainer = styled.div`
 
 const Content = styled.div`
   flex-grow: 1; /* Allow content to grow and fill available space */
+  padding: 4px 110px;
+
+  @media (max-width: 768px) {
+    padding: 0px 10px;
+  }
 `;
 
 function BlogPage() {
