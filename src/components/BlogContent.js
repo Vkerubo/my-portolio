@@ -1,6 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const BlogTitle = styled.h1`
   color: #333;
@@ -39,6 +40,7 @@ const Tagline = styled.p`
 function TypingTagline({text}) {
     const [displayText, setDisplayText] = useState("");
     const [textIndex, setTextIndex] = useState(0);
+
 };
 
 function BlogContent() {
