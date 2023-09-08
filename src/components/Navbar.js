@@ -121,8 +121,8 @@ const Navbar = () => {
           Home
         </NavigateLink>
         <NavigateLink to="/about">About</NavigateLink>
-        <NavigateLink to="/blog">Blog</NavigateLink>
         <NavigateLink to="/projects">Projects</NavigateLink>
+        <NavigateLink to="/ui-ux">UI/UX Designs</NavigateLink>
         <NavigateLink to="/contact">Contact</NavigateLink>
         <ResumeButtonWrapper>
           <ResumeButton
