@@ -32,6 +32,7 @@ const NavLinks = styled.ul`
   margin-top: 40px;
   align-items: center;
   font-family: sen;
+  white-space: nowrap;
 
   @media (max-width: 768px) {
     gap: 10px;
