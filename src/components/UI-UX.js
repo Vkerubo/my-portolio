@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "../fonts.css";
 import ShineyardImage1 from "./assets/Shineyard.png";
-import ShineyardImage2 from "./assets/Shineyard 2.png";
+
 
 const MainContainer = styled.div`
   display: flex;
@@ -180,47 +180,6 @@ const Image2 = styled.div`
   }
 `;
 
-const SecondColumnContainer = styled.div`
-  display: flex;
-  margin-top: 30px;
-  width: 100%;
-  max-width: 1335px;
-  height: 510px;
-  flex-shrink: 0;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-`;
-
-const LeftColumn = styled.div`
-  flex: 30%;
-  padding-right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const RightColumn = styled.div`
-  flex: 70%;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  max-width: 100%;
-`;
-
-const ImageWrapper = styled.div`
-  border-radius: 42px;
-  border: 1px solid rgba(0, 0, 0, 0.22);
-  background: url(${(props) => props.imageUrl}), lightgray 50% / cover no-repeat;
-  width: ${(props) => props.width}px;
-  height: ${(props) => props.height}px;
-  flex-shrink: 0;
-
-  @media (max-width: 868px) {
-    margin-top: 30px;
-  }
-`;
 
 function UiUx() {
   return (
