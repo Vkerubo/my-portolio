@@ -46,15 +46,15 @@ function UiUx() {
     <MainContainer>
       <Navbar />
       <Content>
-        <Title>Not Only Can I Develop World-Class Apps...</Title>
+        <Title>
+          Not Only Can I <DevelopText>Develop</DevelopText> World-Class Apps...
+        </Title>
         <Text>
           I also sprinkle design magic with Figma! 🪄✨ Currently, I'm on a
           creative adventure exploring Spline, and guess what? I even designed
           this portfolio – pretty snazzy, right? 😎
         </Text>
-        <Text>
-          Take a glimpse of some designs I've created;
-        </Text>
+        <Text>Take a glimpse of some designs I've created;</Text>
       </Content>
       <Footer />
     </MainContainer>
