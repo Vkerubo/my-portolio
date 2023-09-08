@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const MainContainer = styled.div`
   display: flex;
@@ -26,13 +26,34 @@ const Title = styled.h1`
   font-weight: 700;
   line-height: normal;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    padding: 0px 10px;
+    font-size: 25px;
+  }
 `;
 
 const DevelopText = styled.span`
   color: #1fb8ab; /* Set the color for "Develop" */
 `;
 
-const Text = styled.p`
+const Text1 = styled.p`
+  color: #666;
+  font-family: "Nanum Brush Script", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  margin-bottom: 20px;
+`;
+
+const Text2 = styled.p`
+  color: #666;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  margin-bottom: 20px;
+`;
+
+const Text3 = styled.p`
   color: #666;
   font-family: Montserrat;
   font-size: 20px;
@@ -49,12 +70,12 @@ function UiUx() {
         <Title>
           Not Only Can I <DevelopText>Develop</DevelopText> World-Class Apps...
         </Title>
-        <Text>
-          I also sprinkle design magic with Figma! 🪄✨ Currently, I'm on a
-          creative adventure exploring Spline, and guess what? I even designed
-          this portfolio – pretty snazzy, right? 😎
-        </Text>
-        <Text>Take a glimpse of some designs I've created;</Text>
+        <Text1>I also sprinkle design magic with Figma! 🪄✨</Text1>
+        <Text2>
+          Currently, I'm on a creative adventure exploring Spline, and guess
+          what? I even designed this portfolio – pretty snazzy, right? 😎
+        </Text2>
+        <Text3>Take a glimpse of some designs I've created;</Text3>
       </Content>
       <Footer />
     </MainContainer>
