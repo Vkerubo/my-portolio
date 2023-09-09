@@ -248,6 +248,28 @@ function UiUx() {
             ))}
           </ColumnContainer>
         </CenteredContainer>
+
+        <CenteredContainer>
+          <Title2>Mamacare App</Title2>
+          <Description>
+            A maternal healthcare app for mothers to track their pregnancy, call for emergency help and chat with MamBot
+            on childhood and motherhood questions.
+          </Description>
+          <EmailLink
+            href="https://www.figma.com/file/HikVXXXIT1sWaNQXI4SBtv/Mamacare?type=design&node-id=0-1&mode=design&t=GopN2jmGuXOc4Ipv-0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Design
+          </EmailLink>
+          <ColumnContainer>
+            {mamacareImages.map((image, index) => (
+              <ImageCard key={index} onClick={() => toggleModal(image)}>
+                <Image src={image.src} alt={image.alt} />
+              </ImageCard>
+            ))}
+          </ColumnContainer>
+        </CenteredContainer>
       </Content>
       <Footer />
       {showModal && (
