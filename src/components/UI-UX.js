@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styled-components";
+import { styled, keyframes } from "styled-components";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "../fonts.css";
@@ -18,12 +18,7 @@ const Content = styled.div`
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  //justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-
-  @media (max-width: 1068px) {
-    padding: 0px 5px;
-  }
+  align-items: center;
 `;
 
 const Title = styled.h1`
@@ -81,72 +76,40 @@ const FigmaText = styled.span`
   color: #1fb8ab; /* Set the color for "Figma" */
 `;
 
-// const ProjectTitle = styled.h2`
-//   color: #0a1930;
-//   font-family: Montserrat;
-//   font-size: 24px;
-//   font-style: normal;
-//   font-weight: 700;
-//   line-height: normal;
-// `;
-
-// const ProjectDescription = styled.p`
-//   color: #0a1930;
-//   font-family: Montserrat;
-//   font-size: 16px;
-//   font-style: normal;
-//   line-height: 25px;
-//   margin-top: 10px;
-// `;
-
-// const ViewDesignButton = styled.a`
-//   color: #56a8a1;
-//   font-family: Montserrat;
-//   font-size: 16px;
-//   font-style: normal;
-//   font-weight: 700;
-//   width: 90px;
-//   line-height: normal;
-//   text-decoration: none;
-//   border: 1px solid #56a8a1;
-//   padding: 14px 10px ;
-//   display: inline-block;
-//   transition: background-color 0.3s, color 0.3s;
-//   margin-top: 20px;
-
-//   &:hover {
-//     background-color: #56a8a1;
-//     color: white;
-//   }
-// `;
-
-const ColumnContainer = styled.div`
-  display: flex;
-  margin-top: 30px;
-  width: 100%;
-  max-width: 1335px;
-  flex-shrink: 0;
-  justify-content: space-between; /* Add this to space the image cards */
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center; /* Center cards on mobile */
+const float = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
   }
 `;
 
+const CenteredContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+`;
+
+const ColumnContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+  gap: 20px;
+  animation: ${float} 4s ease-in-out infinite;
+`;
+
 const ImageCard = styled.div`
-  flex: 1; /* Equal width for all cards */
-  position: relative;
-  z-index: ${(props) =>
-    props.zIndex || 1}; /* Set z-index to control stacking */
-  transform: translateX(
-    ${(props) => props.translateX || 0}px
-  ); /* Move cards horizontally */
-  transition: transform 0.3s;
+  flex: 1;
+  max-width: 300px;
   border: 1px solid #ccc;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 0;
 `;
 
 const Image = styled.img`
@@ -171,17 +134,19 @@ function UiUx() {
         </Text2>
         <Text3>Take a glimpse of some designs I've created;</Text3>
 
-        <ColumnContainer>
-          <ImageCard zIndex={3} translateX={-20}>
-            <Image src={ShineyardImage3} alt="Shineyard 3" />
-          </ImageCard>
-          <ImageCard zIndex={2} translateX={-10}>
-            <Image src={ShineyardImage2} alt="Shineyard 2" />
-          </ImageCard>
-          <ImageCard zIndex={1}>
-            <Image src={ShineyardImage1} alt="Shineyard 1" />
-          </ImageCard>
-        </ColumnContainer>
+        <CenteredContainer>
+          <ColumnContainer>
+            <ImageCard>
+              <Image src={ShineyardImage1} alt="Shineyard 1" />
+            </ImageCard>
+            <ImageCard>
+              <Image src={ShineyardImage2} alt="Shineyard 2" />
+            </ImageCard>
+            <ImageCard>
+              <Image src={ShineyardImage3} alt="Shineyard 3" />
+            </ImageCard>
+          </ColumnContainer>
+        </CenteredContainer>
       </Content>
       <Footer />
     </MainContainer>
