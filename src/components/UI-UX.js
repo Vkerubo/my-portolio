@@ -3,8 +3,9 @@ import { styled } from "styled-components";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "../fonts.css";
-// import ShineyardImage1 from "./assets/Shineyard.png";
-// import ShineyardImage2 from "./assets/Shineyard 2.png";
+import ShineyardImage1 from "./assets/Shineyardimage1.png";
+import ShineyardImage2 from "./assets/Shineyard 2.png";
+import ShineyardImage3 from "./assets/Shineyardimage3.png";
 
 const MainContainer = styled.div`
   display: flex;
@@ -119,6 +120,40 @@ const FigmaText = styled.span`
 //   }
 // `;
 
+const ColumnContainer = styled.div`
+  display: flex;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1335px;
+  flex-shrink: 0;
+  justify-content: space-between; /* Add this to space the image cards */
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center; /* Center cards on mobile */
+  }
+`;
+
+const ImageCard = styled.div`
+  flex: 1; /* Equal width for all cards */
+  position: relative;
+  z-index: ${(props) =>
+    props.zIndex || 1}; /* Set z-index to control stacking */
+  transform: translateX(
+    ${(props) => props.translateX || 0}px
+  ); /* Move cards horizontally */
+  transition: transform 0.3s;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+`;
+
 function UiUx() {
   return (
     <MainContainer>
@@ -135,6 +170,18 @@ function UiUx() {
           guess what? I even designed this portfolio – pretty snazzy, right? 😎
         </Text2>
         <Text3>Take a glimpse of some designs I've created;</Text3>
+
+        <ColumnContainer>
+          <ImageCard zIndex={3} translateX={-20}>
+            <Image src={ShineyardImage3} alt="Shineyard 3" />
+          </ImageCard>
+          <ImageCard zIndex={2} translateX={-10}>
+            <Image src={ShineyardImage2} alt="Shineyard 2" />
+          </ImageCard>
+          <ImageCard zIndex={1}>
+            <Image src={ShineyardImage1} alt="Shineyard 1" />
+          </ImageCard>
+        </ColumnContainer>
       </Content>
       <Footer />
     </MainContainer>
