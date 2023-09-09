@@ -168,7 +168,13 @@ const ViewMoreLink = styled(Link)`
 `;
 
 
-function Projects() {
+function Projects({
+  title,
+  description,
+  imageSrc,
+  liveDemoLink,
+  viewCodeLink,
+}) {
   return (
     <>
       <ProjectsTitle>My Projects</ProjectsTitle>
