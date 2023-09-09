@@ -6,6 +6,10 @@ import "../fonts.css";
 import ShineyardImage1 from "./assets/Shineyardimage1.png";
 import ShineyardImage2 from "./assets/Shineyard 2.png";
 import ShineyardImage3 from "./assets/Shineyardimage3.png";
+import Mamacareimage1 from "./assets/MamaCare.png";
+import Mamacareimage2 from "./assets/MamaCare2.png";
+import Mamacareimage3 from "./assets/mamacare 4.png";
+
 
 const MainContainer = styled.div`
   display: flex;
@@ -34,6 +38,16 @@ const Title = styled.h1`
     padding: 0px 10px;
     font-size: 20px;
   }
+`;
+
+const Title2 = styled.h1`
+  color: #0a1930;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 6px;
 `;
 
 const DevelopText = styled.span`
@@ -151,6 +165,34 @@ const CloseButton = styled.span`
   font-size: 20px;
 `;
 
+const Description = styled.p`
+  color: #666;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  margin-top: 0px;
+`;
+
+const EmailLink = styled.a`
+  color: #56a8a1;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+  text-decoration: none;
+  border: 1px solid #56a8a1;
+  padding: 8px 10px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #56a8a1;
+    color: white;
+  }
+`;
+
 function UiUx() {
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -159,6 +201,12 @@ function UiUx() {
     { src: ShineyardImage1, alt: "Shineyard 1" },
     { src: ShineyardImage2, alt: "Shineyard 2" },
     { src: ShineyardImage3, alt: "Shineyard 3" },
+  ];
+
+  const mamacareImages = [
+    { src: Mamacareimage1, alt: "Mamacare 1" },
+    { src: Mamacareimage2, alt: "Mamacare 2" },
+    { src: Mamacareimage3, alt: "Mamacare 3" },
   ];
 
   const toggleModal = (image) => {
@@ -183,6 +231,15 @@ function UiUx() {
         <Text3>Take a glimpse of some designs I've created;</Text3>
 
         <CenteredContainer>
+          <Title2>Shineyard Properties</Title2>
+          <Description>A real estate homepage.</Description>
+          <EmailLink
+            href="https://www.figma.com/file/5IcjQ7zvYE0rRNeeKoEZQ7/My-Portfolio?type=design&node-id=236-45&mode=design&t=V3ysagn447LBzUYw-0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Design
+          </EmailLink>
           <ColumnContainer>
             {images.map((image, index) => (
               <ImageCard key={index} onClick={() => toggleModal(image)}>
