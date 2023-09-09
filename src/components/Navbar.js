@@ -12,9 +12,6 @@ const NavbarContainer = styled.div`
   box-shadow: 0px 10px 4px 0px rgba(0, 0, 0, 0.25);
   max-width: 100%;
 
-  @media (max-width: 768px) {
-    text-align: center;
-  }
 `;
 
 const Header = styled.h1`

@@ -12,6 +12,7 @@ const HeroContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  max-width: 100%
   color: #a1e4d3;
   font-family: "Sen", sans-serif;
 `;
