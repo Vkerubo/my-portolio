@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled, keyframes } from "styled-components";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -28,7 +28,7 @@ const Title = styled.h1`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
 
   @media (max-width: 668px) {
     padding: 0px 10px;
@@ -110,6 +110,7 @@ const ImageCard = styled.div`
   overflow: hidden;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   min-width: 0;
+  cursor: pointer;
 `;
 
 const Image = styled.img`
@@ -117,7 +118,54 @@ const Image = styled.img`
   height: auto;
 `;
 
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+`;
+
+const ModalContent = styled.div`
+  background-color: #fff;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+`;
+
+const CloseButton = styled.span`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+`;
+
 function UiUx() {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const images = [
+    { src: ShineyardImage1, alt: "Shineyard 1" },
+    { src: ShineyardImage2, alt: "Shineyard 2" },
+    { src: ShineyardImage3, alt: "Shineyard 3" },
+  ];
+
+  const toggleModal = (image) => {
+    setSelectedImage(image);
+    setShowModal(!showModal);
+  };
+
   return (
     <MainContainer>
       <Navbar />
@@ -136,19 +184,25 @@ function UiUx() {
 
         <CenteredContainer>
           <ColumnContainer>
-            <ImageCard>
-              <Image src={ShineyardImage1} alt="Shineyard 1" />
-            </ImageCard>
-            <ImageCard>
-              <Image src={ShineyardImage2} alt="Shineyard 2" />
-            </ImageCard>
-            <ImageCard>
-              <Image src={ShineyardImage3} alt="Shineyard 3" />
-            </ImageCard>
+            {images.map((image, index) => (
+              <ImageCard key={index} onClick={() => toggleModal(image)}>
+                <Image src={image.src} alt={image.alt} />
+              </ImageCard>
+            ))}
           </ColumnContainer>
         </CenteredContainer>
       </Content>
       <Footer />
+      {showModal && (
+        <ModalOverlay>
+          <ModalContent>
+            <CloseButton onClick={() => toggleModal(null)}>X</CloseButton>
+            {selectedImage && (
+              <Image src={selectedImage.src} alt="Enlarged Image" />
+            )}
+          </ModalContent>
+        </ModalOverlay>
+      )}
     </MainContainer>
   );
 }
