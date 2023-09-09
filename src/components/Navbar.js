@@ -33,6 +33,7 @@ const NavLinks = styled.ul`
   margin-bottom: 1px;
   margin-top: 40px;
   align-items: center;
+  margin 0;
   font-family: sen;
   white-space: nowrap;
 
@@ -125,7 +126,7 @@ const Navbar = () => {
         </NavigateLink>
         <NavigateLink to="/about">About</NavigateLink>
         <NavigateLink to="/projects">Projects</NavigateLink>
-        <NavigateLink to="/ui-ux">UI/UX Designs</NavigateLink>
+        <NavigateLink to="/ui-ux">Designs</NavigateLink>
         <NavigateLink to="/contact">Contact</NavigateLink>
         <ResumeButtonWrapper>
           <ResumeButton
