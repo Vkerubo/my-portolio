@@ -57,7 +57,7 @@ const NavigateLink = styled(NavLink)`
   }
 
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 
