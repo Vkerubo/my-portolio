@@ -4,6 +4,7 @@ import Homepage from "./components/Homepage";
 import About from "./components/About";
 import UiUx from "./components/UI-UX";
 import ContactPage from "./components/ContactPage";
+import ProjectsPage from "./components/ProjectsPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/ui-ux" element={<UiUx />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path='/projects'element={ <ProjectsPage/>}></Route>
       </Routes>
     </Router>
   );
