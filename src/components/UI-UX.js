@@ -9,7 +9,8 @@ import ShineyardImage3 from "./assets/Shineyardimage3.png";
 import Mamacareimage1 from "./assets/MamaCare.png";
 import Mamacareimage2 from "./assets/MamaCare2.png";
 import Mamacareimage3 from "./assets/mamacare 4.png";
-
+import Techsistersimage1 from "./assets/TechSisters.png";
+import Techsistersimage2 from "./assets/TechSisters 2.png";
 
 const MainContainer = styled.div`
   display: flex;
@@ -209,6 +210,11 @@ function UiUx() {
     { src: Mamacareimage3, alt: "Mamacare 3" },
   ];
 
+  const techsistersImages = [
+    { src: Techsistersimage1, alt: "Mamacare 1" },
+    { src: Techsistersimage2, alt: "Mamacare 2" },
+  ];
+
   const toggleModal = (image) => {
     setSelectedImage(image);
     setShowModal(!showModal);
@@ -252,8 +258,9 @@ function UiUx() {
         <CenteredContainer>
           <Title2>Mamacare App</Title2>
           <Description>
-            A maternal healthcare app for mothers to track their pregnancy, call for emergency help and chat with MamBot
-            on childhood and motherhood questions.
+            A maternal healthcare app for mothers to track their pregnancy, call
+            for emergency help and chat with MamBot on childhood and motherhood
+            questions.
           </Description>
           <EmailLink
             href="https://www.figma.com/file/HikVXXXIT1sWaNQXI4SBtv/Mamacare?type=design&node-id=0-1&mode=design&t=GopN2jmGuXOc4Ipv-0"
@@ -264,6 +271,27 @@ function UiUx() {
           </EmailLink>
           <ColumnContainer>
             {mamacareImages.map((image, index) => (
+              <ImageCard key={index} onClick={() => toggleModal(image)}>
+                <Image src={image.src} alt={image.alt} />
+              </ImageCard>
+            ))}
+          </ColumnContainer>
+        </CenteredContainer>
+
+        <CenteredContainer>
+          <Title2>Tech Sisters Kenya</Title2>
+          <Description>
+            A website app for a tech non-profit community for women in Kenya
+          </Description>
+          <EmailLink
+            href="https://www.figma.com/file/2Nq49TPbFKSjysE5J3foUf/Tech-Sisters-Kenya?type=design&mode=design&t=p0UvoI7nzjzJ8VhM-0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Design
+          </EmailLink>
+          <ColumnContainer>
+            {techsistersImages.map((image, index) => (
               <ImageCard key={index} onClick={() => toggleModal(image)}>
                 <Image src={image.src} alt={image.alt} />
               </ImageCard>
