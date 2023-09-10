@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import ChamaIMage from "../components/assets/chama.png";
 import ArrowImahe from "../components/assets/Arrow 1.svg";
 import { Link } from "react-router-dom";
+import ProjectsPage from "./ProjectsPage";
 
 const ProjectsTitle = styled.div`
   color: #333;
@@ -167,55 +168,39 @@ const ViewMoreLink = styled(Link)`
   }
 `;
 
-
 function Projects({
   title,
   description,
   imageSrc,
   liveDemoLink,
-  viewCodeLink,
 }) {
+
+
   return (
     <>
       <ProjectsTitle>My Projects</ProjectsTitle>
       <Container>
         <LeftColumn>
-          <Title>Chama-Ke</Title>
-          <Description>
-            Group Project. This is a Chama (merry-go-round) website that allows
-            users to find chama mates and contribute money monthly for a course.
-            It fetches from a complex API we created. It’s integrated with
-            Daraja API for payments.
-          </Description>
-          <LiveDemoButton
-            href="https://glittering-hotteok-56297e.netlify.app/"
-            target="_blank"
-          >
+          <Title>{title}</Title>
+          <Description>{description}</Description>
+          <LiveDemoButton href={liveDemoLink} target="_blank">
             Live Demo
           </LiveDemoButton>
         </LeftColumn>
         <RightColumn>
-          <ChamaImageStyled src={ChamaIMage} alt="Chama" />
+          <ChamaImageStyled src={ChamaIMage} alt={title} />
         </RightColumn>
       </Container>
       <ContainerTwo>
         <LeftColumn>
-          <Title>Chama-Ke</Title>
-          <Description>
-            Group Project. This is a Chama (merry-go-round) website that allows
-            users to find chama mates and contribute money monthly for a course.
-            It fetches from a complex API we created. It’s integrated with
-            Daraja API for payments.
-          </Description>
-          <LiveDemoButton
-            href="https://glittering-hotteok-56297e.netlify.app/"
-            target="_blank"
-          >
+          <Title>{title}</Title>
+          <Description>{description}</Description>
+          <LiveDemoButton href={liveDemoLink} target="_blank">
             Live Demo
           </LiveDemoButton>
         </LeftColumn>
         <RightColumn>
-          <ChamaImageStyled src={ChamaIMage} alt="Chama" />
+          <ChamaImageStyled src={ChamaIMage} alt={title} />
         </RightColumn>
       </ContainerTwo>
       <ViewMoreLink to="/projects">
