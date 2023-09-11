@@ -3,7 +3,6 @@ import { styled } from "styled-components";
 import ChamaIMage from "../components/assets/chama.png";
 import ArrowImahe from "../components/assets/Arrow 1.svg";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const ProjectsTitle = styled.div`
   color: #333;
@@ -170,19 +169,7 @@ const ViewMoreLink = styled(Link)`
 
 
 function Projects() {
-
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth", //change this to "auto" for instant scroll
-  });
-};
-
- useEffect(() => {
-   scrollToTop();
- }, []);
-
-
+  
   return (
     <>
       <ProjectsTitle>My Projects</ProjectsTitle>
