@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import ChamaIMage from "../components/assets/chama.png";
 import ArrowImahe from "../components/assets/Arrow 1.svg";
 import { Link } from "react-router-dom";
+import SkyPropertiesImage from "./assets/Skyproperties.png";
 
 const ProjectsTitle = styled.div`
   color: #333;
@@ -112,7 +113,7 @@ const ChamaImageStyled = styled.img`
   max-height: 100%;
   margin-left: 10px;
   margin-right: 10px;
-  box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.35);
 
   @media (max-width: 768px) {
     width: 100%;
@@ -169,7 +170,7 @@ const ViewMoreLink = styled(Link)`
 
 
 function Projects() {
-  
+
   return (
     <>
       <ProjectsTitle>My Projects</ProjectsTitle>
@@ -195,22 +196,25 @@ function Projects() {
       </Container>
       <ContainerTwo>
         <LeftColumn>
-          <Title>Chama-Ke</Title>
+          <Title>Sky Properties</Title>
           <Description>
-            Group Project. This is a Chama (merry-go-round) website that allows
-            users to find chama mates and contribute money monthly for a course.
-            It fetches from a complex API we created. It’s integrated with
-            Daraja API for payments.
+            A real estate app where a user can log in as a buyer or seller to
+            buy/seller a property, view or favorite properties available on the
+            platform and also search by location and contact the seller. A buyer
+            can also upload their property listings.
           </Description>
           <LiveDemoButton
-            href="https://glittering-hotteok-56297e.netlify.app/"
+            href="https://skyproperties.netlify.app/"
             target="_blank"
           >
             Live Demo
           </LiveDemoButton>
         </LeftColumn>
         <RightColumn>
-          <ChamaImageStyled src={ChamaIMage} alt="Chama" />
+          <ChamaImageStyled
+            src={SkyPropertiesImage}
+            alt="Sky properties image"
+          />
         </RightColumn>
       </ContainerTwo>
       <ViewMoreLink to="/projects">

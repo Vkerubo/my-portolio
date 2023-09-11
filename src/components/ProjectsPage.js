@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Skypropertiesimage from "./assets/Skyproperties.png";
 import ChamaIMage from "./assets/chama.png";
-// import { Link } from "react-router-dom";
 import NutriCookImage from "./assets/NutriCook.png";
 
 const PageWrapper = styled.div`
@@ -138,7 +137,7 @@ const ChamaImageStyled = styled.img`
   max-height: 100%;
   margin-left: 10px;
   margin-right: 10px;
-  box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.35);
 
   @media (max-width: 768px) {
     width: 100%;
@@ -193,7 +192,7 @@ function ProjectsPage() {
         </Container>
         <Container>
           <LeftColumn>
-            <Title>Skyproperties</Title>
+            <Title>Sky Properties</Title>
             <Description>
               A real estate app where a user can log in as a buyer or seller to buy/seller
               a property, view or favorite properties available on the platform and also search by location and contact
