@@ -169,6 +169,14 @@ const ViewMoreLink = styled(Link)`
 
 
 function Projects() {
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", //change this to "auto" for instant scroll
+  });
+};
+
   return (
     <>
       <ProjectsTitle>My Projects</ProjectsTitle>
