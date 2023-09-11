@@ -5,6 +5,7 @@ import About from "./components/About";
 import UiUx from "./components/UI-UX";
 import ContactPage from "./components/ContactPage";
 import ProjectsPage from "./components/ProjectsPage";
+import { Helmet } from "react-helmet";
 
 function ProjectsPageWithScrollToTop() {
   useEffect(() => {
@@ -18,12 +19,13 @@ function ProjectsPageWithScrollToTop() {
 function App() {
   return (
     <Router>
+      <Helmet title="Valentine Kerubo | Portfolio" />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
         <Route path="/ui-ux" element={<UiUx />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path='/projects'element={ <ProjectsPageWithScrollToTop />} />
+        <Route path="/projects" element={<ProjectsPageWithScrollToTop />} />
       </Routes>
     </Router>
   );
