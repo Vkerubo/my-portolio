@@ -141,6 +141,7 @@ const HeroImageStyled = styled.img`
   }
 `;
 
+
 function HeroSection() {
   return (
     <HeroContainer>
@@ -182,10 +183,9 @@ function HeroSection() {
 
           <DescriptionText>
             👩‍💻 Crafting digital dreams &nbsp;&nbsp;|&nbsp;&nbsp; Lifelong
-            learner &nbsp;&nbsp;|&nbsp;&nbsp; Your go-to developer for amazing
-            projects 🚀 &nbsp;&nbsp;|&nbsp;&nbsp; Passionate about mentoring
-            women in tech 💪 &nbsp;&nbsp;|&nbsp;&nbsp; Let's build something
-            incredible together, <u>hire me!</u>
+            learner &nbsp;&nbsp;|&nbsp;&nbsp; Passionate about mentoring women
+            in tech 💪 &nbsp;&nbsp;|&nbsp;&nbsp; Currently looking for new
+            opportunities, <b>hire me!</b>
           </DescriptionText>
         </HeroColumn>
         <HeroImageContainer>

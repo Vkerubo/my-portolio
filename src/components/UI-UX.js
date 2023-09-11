@@ -225,7 +225,7 @@ function UiUx() {
       <Navbar />
       <Content>
         <Title>
-          Not Only Can I <DevelopText>Develop</DevelopText> World-Class Apps...
+          <DevelopText>...</DevelopText>
         </Title>
         <Text1>
           I also sprinkle design magic with <FigmaText>Figma!</FigmaText> 🪄✨

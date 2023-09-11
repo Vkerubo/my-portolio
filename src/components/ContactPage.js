@@ -69,8 +69,9 @@ function ContactPage() {
       <Navbar />
       <Content>
         <ContactContent>
-          I'm passionate and ready to contribute my skills and expertise to your
-          team. Let's explore opportunities for growth together.
+          I'm currently looking for new
+          opportunities, where i'd be able to contribute significant value to an
+          organization
         </ContactContent>
         <ActionButton onClick={handleHireMeClick}>Hire Me</ActionButton>
       </Content>
