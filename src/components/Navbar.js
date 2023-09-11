@@ -9,7 +9,7 @@ const NavbarContainer = styled.div`
   align-items: center;
   // text-align: center;
   padding: 20px;
-  box-shadow: 0px 10px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   max-width: 100%;
 
 `;
